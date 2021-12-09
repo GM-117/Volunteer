@@ -1,0 +1,4 @@
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"dialog-container setcloth-height"},[_c('el-dialog',{attrs:{"visible":_vm.show,"before-close":_vm.closeDialog,"close-on-click-modal":false,"title":_vm.$t('clothSize')},on:{"update:visible":function($event){_vm.show=$event},"open":_vm.openDialog}},[(_vm.Config.pcClothesPicUrl)?_c('img',{staticStyle:{"width":"100%","height":"100%"},attrs:{"src":_vm.returnPicUrl(_vm.Config.pcClothesPicUrl),"alt":""}}):_c('div',{staticStyle:{"height":"200px","line-height":"200px","text-align":"center","font-size":"24px"}},[_vm._v("暂无数据")])])],1)}
+var staticRenderFns = []
+
+export { render, staticRenderFns }

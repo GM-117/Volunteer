@@ -25,7 +25,8 @@ export default {
 </script>
 
 <style>
-#app {
+@import "styles/app.css";
+/* #app {
   margin: 0;
   border: 0;
   padding: 0;
@@ -39,5 +40,5 @@ body .el-table th.gutter{
 
 body .el-table colgroup.gutter{
   display: table-cell!important;
-}
+} */
 </style>

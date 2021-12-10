@@ -23,15 +23,12 @@
         <register-Step-One ref="stepOne" :rules="rules" :isDisabled="isDisabled" :isId="isId"></register-Step-One>
       </div>
       <div v-show="show === '2'">
-        <div>22222</div>
         <register-Step-Two ref="stepTwo" :rules="rules" :isDisabled="isDisabled"></register-Step-Two>
       </div>
       <div v-show="show === '3'">
-        <div>33333</div>
         <register-Step-Three ref="stepThree" :rules="rules" :isDisabled="isDisabled"></register-Step-Three>
       </div>
       <div v-show="show === '4'">
-        <div>4444</div>
         <register-step-four ref="stepFour"></register-step-four>
       </div>
     </div>
@@ -72,7 +69,7 @@ export default {
     return {
       form: new UserSearchClass('form'), // 实例化一个表单的变量
       rules: new UserSearchClass('rule', this), // 实例化一个表单的规则
-      show: '1',
+      show: '4',
       ifMistake: '',
       confirmDialog: {
         visible: false,

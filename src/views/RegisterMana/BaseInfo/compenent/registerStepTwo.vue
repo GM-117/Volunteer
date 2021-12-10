@@ -5,14 +5,14 @@
       <div class="title">②联系信息</div>
       <el-row>
         <el-col :span="6">
-          <el-form-item :label="$t('XJZSE')" class="Form_item" prop="domicileProvince">
+          <el-form-item :label="$t('现居住省')" class="Form_item" prop="domicileProvince">
             <el-select v-model="form.domicileProvince" clearable class="set-width" @change="changedomicileProvince">
               <el-option v-for="item in province" :key="`domicileProvince${item.provinceCode}`" :value="item.provinceCode" :label="item.provinceName"></el-option>
             </el-select>
           </el-form-item>
         </el-col>
         <el-col :span="6" :offset="1">
-          <el-form-item :label="$t('XJZSI')" class="Form_item" prop="domicileCity">
+          <el-form-item :label="$t('现居住市')" class="Form_item" prop="domicileCity">
             <el-select v-model="domicileData" clearable class="set-width" @change="changeDom" v-if="form.domicileCity === ''">
               <el-option v-for="item in domicileCity" :key="`domicileCity${item.cityCode}`" :value="item.cityCode" :label="item.cityName"></el-option>
             </el-select>
@@ -22,7 +22,7 @@
           </el-form-item>
         </el-col>
         <el-col :span="6" :offset="1">
-          <el-form-item :label="$t('XJZQ')" class="Form_item">
+          <el-form-item :label="$t('现居住区')" class="Form_item">
             <el-select v-model="form.domicileArea" clearable class="set-width">
               <el-option v-for="item in domicileArea" :key="`domicileArea${item.areaCode}`" :value="item.areaCode" :label="item.areaName"></el-option>
             </el-select>
@@ -31,14 +31,14 @@
       </el-row>
       <el-row>
         <el-col :span="13">
-          <el-form-item :label="$t('XJZXXDZ')" class="Form_item" prop="domicileAddress">
+          <el-form-item :label="$t('现居住详细地址')" class="Form_item" prop="domicileAddress">
             <el-input size="mini"  v-model.trim="form.domicileAddress" clearable></el-input>
           </el-form-item>
         </el-col>
       </el-row>
       <el-row>
         <el-col :span="6">
-          <el-form-item :label="$t('HJSE')" class="Form_item" prop="censusProvince"
+          <el-form-item :label="$t('户籍省')" class="Form_item" prop="censusProvince"
               :rules="form.nationality==='CHN'?rules.censusProvince:[{required: false}]">
             <el-select v-model="form.censusProvince" clearable class="set-width" @change="changeCensusProvince">
               <el-option v-for="item in province" :key="`censusProvince${item.provinceCode}`" :value="item.provinceCode" :label="item.provinceName"></el-option>
@@ -46,7 +46,7 @@
           </el-form-item>
         </el-col>
         <el-col :span="6" :offset="1">
-          <el-form-item :label="$t('HJSI')" class="Form_item" prop="censusCity"
+          <el-form-item :label="$t('户籍市')" class="Form_item" prop="censusCity"
             :rules="form.nationality==='CHN'?rules.censusCity:[{required: false}]">
             <el-select v-model="form.censusCity" clearable class="set-width" @change="changeCensusCity">
               <el-option v-for="item in censusCity" :key="`censusCity${item.cityCode}`" :value="item.cityCode" :label="item.cityName"></el-option>
@@ -54,7 +54,7 @@
           </el-form-item>
         </el-col>
         <el-col :span="6" :offset="1">
-          <el-form-item :label="$t('HJQ')" class="Form_item">
+          <el-form-item :label="$t('户籍区')" class="Form_item">
             <el-select v-model="form.censusArea" clearable class="set-width">
               <el-option v-for="item in censusArea" :key="`censusArea${item.areaCode}`" :value="item.areaCode" :label="item.areaName"></el-option>
             </el-select>
@@ -66,7 +66,7 @@
       </el-row>
       <el-row>
         <el-col :span="13">
-          <el-form-item :label="$t('HJXXDZ')" class="Form_item" prop="censusAddress"
+          <el-form-item :label="$t('户籍详细地址')" class="Form_item" prop="censusAddress"
             :rules="form.nationality==='CHN'?rules.censusAddress:[{required: false}]">
             <el-input size="mini"  v-model.trim="form.censusAddress" clearable placeholder="填写内容必须与户籍所在地址一致！"></el-input>
           </el-form-item>
@@ -84,24 +84,24 @@
           </el-form-item>
         </el-col>
         <el-col :span="6">
-          <el-form-item :label="$t('wechat')" class="Form_item" prop="wechat">
+          <el-form-item :label="$t('微信')" class="Form_item" prop="wechat">
             <el-input size="mini"  v-model.trim="form.wechat" clearable></el-input>
           </el-form-item>
         </el-col>
         <el-col :span="6" :offset="1">
-          <el-form-item :label="$t('mail')" class="Form_item" prop="email">
+          <el-form-item :label="$t('邮箱')" class="Form_item" prop="email">
             <el-input size="mini"  v-model.trim="form.email" clearable></el-input>
           </el-form-item>
         </el-col>
       </el-row>
       <el-row>
         <el-col :span="6">
-          <el-form-item :label="$t('emergency-contacter')" class="Form_item" prop="emergencyContact">
+          <el-form-item :label="$t('紧急联系人')" class="Form_item" prop="emergencyContact">
             <el-input size="mini"  v-model.trim="form.emergencyContact" clearable></el-input>
           </el-form-item>
         </el-col>
         <el-col :span="6" :offset="1">
-          <el-form-item :label="$t('emergency-contact')" class="Form_item" prop="emergencyContactPhone">
+          <el-form-item :label="$t('紧急联系人电话')" class="Form_item" prop="emergencyContactPhone">
             <el-input size="mini"  v-model.trim="form.emergencyContactPhone" clearable @blur="differentMoible"></el-input>
           </el-form-item>
         </el-col>

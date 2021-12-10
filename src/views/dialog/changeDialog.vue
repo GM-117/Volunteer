@@ -1,7 +1,7 @@
 <template>
   <div class="dialog-container">
     <el-dialog
-      :title="$t('change_password')"
+      :title="$t('修改密码')"
       :visible.sync="show"
       @open="openDialog"
       :before-close="closeDialog"
@@ -11,17 +11,17 @@
       <el-form ref="form" :model="form" label-width="80px" :rules="rules">
         <el-row>
           <el-col :span="24">
-            <el-form-item :label="$t('oldPassword')" prop="oldPassword">
+            <el-form-item :label="$t('旧密码')" prop="oldPassword">
               <el-input v-model="form.oldPassword" type="password"></el-input>
             </el-form-item>
           </el-col>
           <el-col :span="24">
-            <el-form-item :label="$t('newPassword')" prop="newPassword">
+            <el-form-item :label="$t('新密码')" prop="newPassword">
               <el-input v-model="form.newPassword" type="password"></el-input>
             </el-form-item>
           </el-col>
           <el-col :span="24">
-            <el-form-item :label="$t('confirmPassword')" prop="confirmPassword">
+            <el-form-item :label="$t('确认密码')" prop="confirmPassword">
               <el-input v-model="form.confirmPassword" type="password"></el-input>
             </el-form-item>
           </el-col>
@@ -29,8 +29,8 @@
       </el-form>
       <template slot="footer">
         <!-- 如果没特别需求，统一使用mixin里面的关闭方法 -->
-        <el-button @click="sureEvent" type="primary">{{$t('sure')}}</el-button>
-        <el-button @click="closeDialog" type="info" v-if="!isCreate">{{$t('cancel')}}</el-button>
+        <el-button @click="sureEvent" type="primary">{{$t('确认')}}</el-button>
+        <el-button @click="closeDialog" type="info" v-if="!isCreate">{{$t('取消')}}</el-button>
       </template>
     </el-dialog>
   </div>

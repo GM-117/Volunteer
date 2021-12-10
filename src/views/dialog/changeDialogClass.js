@@ -6,15 +6,16 @@
  * @Description: 描述
  * @FilePath: \frontend\src\views\dialog\changeDialogClass.js
  */
-import zh from '@/locales/zh.json'
-import en from '@/locales/en.json'
+// import zh from '@/locales/zh.json'
+// import en from '@/locales/en.json'
 
-const Lang = {
-  zh,
-  en,
-}
+// const Lang = {
+//   zh,
+//   en,
+// }
 class searchFrom {
-  constructor(type, lanuage = 0) {
+  // constructor(type, lanuage = 0) {
+    constructor(type) {
     if (type === 'form') {
       this.oldPassword = ''
       this.newPassword = ''
@@ -73,14 +74,16 @@ class searchFrom {
       this.oldPassword = [
         {
           required: true,
-          message: Lang[lanuage === 1 ? `en` : `zh`].ple_ent_oldPassword,
+          // message: Lang[lanuage === 1 ? `en` : `zh`].ple_ent_oldPassword,
+          message:'请输入旧密码',
           trigger: 'blur',
         },
       ]
       this.newPassword = [
         {
           required: true,
-          message: Lang[lanuage === 1 ? `en` : `zh`].ple_ent_newPassword,
+          message:'请输入新密码',
+          // message: Lang[lanuage === 1 ? `en` : `zh`].ple_ent_newPassword,
           trigger: 'blur',
         },
         {
@@ -91,7 +94,8 @@ class searchFrom {
       this.confirmPassword = [
         {
           required: true,
-          message: Lang[lanuage === 1 ? `en` : `zh`].ple_ent_confirmPassword,
+          message:'请再次输入密码',
+          // message: Lang[lanuage === 1 ? `en` : `zh`].ple_ent_confirmPassword,
           trigger: 'blur',
         },
         {

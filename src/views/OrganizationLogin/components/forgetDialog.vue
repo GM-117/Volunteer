@@ -8,7 +8,7 @@
 -->
 <template>
   <el-dialog
-    :title="$t('WJMM')"
+    :title="$t('忘记密码')"
     :visible.sync="show"
     @open="openDialog"
     :before-close="closeDialog"
@@ -16,15 +16,15 @@
     center
     width="640px">
     <el-form ref="form" :model="form" label-width="140px" :rules="rules" size="mini">
-      <el-form-item :label="$t('SJH')" prop="loginName">
+      <el-form-item :label="$t('手机号')" prop="loginName">
         <el-input v-model="form.loginName">
           <button v-if="Config.verificationSwitch === '1'" slot="append" class="verifi" @click.prevent="handleBtn" :disabled="countTime < 60">{{countTime === 60 ? '获取验证码' : `${countTime}s`}}</button>
         </el-input>
       </el-form-item>
-      <el-form-item :label="$t('YZM')" prop="verifyCode">
+      <el-form-item :label="$t('验证码')" prop="verifyCode">
         <el-input v-model="form.verifyCode"></el-input>
       </el-form-item>
-      <el-form-item :label="$t('password')" prop="password">
+      <el-form-item :label="$t('密码')" prop="password">
         <el-input v-model="form.password" @input="checkData" @focus="tipVisible = true" @blur="tipVisible=false">
            <img src="@/assets/images/xiangqing-3.png" slot="append" @click="tipVisible=!tipVisible">
         </el-input>
@@ -34,13 +34,13 @@
             <p><i v-show="form.password" :class="errorFlag3 ? 'el-icon-close' : 'el-icon-check'"></i>同时包含数字、字母和特殊符号组合;</p>
             <p><i v-show="form.password" :class="errorFlag4 ? 'el-icon-close' : 'el-icon-check'"></i>不能包含连续3位相同/递增(减)的数字;</p>
         </el-popover>
-      <el-form-item :label="$t('comfigPassword')" prop="checkPass">
+      <el-form-item :label="$t('确认密码')" prop="checkPass">
         <el-input v-model="form.checkPass"></el-input>
       </el-form-item>
     </el-form>
     <template slot="footer">
-      <el-button @click="closeDialog" type="info">{{$t('cancel')}}</el-button>
-      <el-button @click="sureEvent" type="primary">{{$t('sure')}}</el-button>
+      <el-button @click="closeDialog" type="info">{{$t('取消')}}</el-button>
+      <el-button @click="sureEvent" type="primary">{{$t('确定')}}</el-button>
     </template>
       <!-- 滑块验证码组件 -->
     <drag ref="drag" @close="closeDrag"></drag>

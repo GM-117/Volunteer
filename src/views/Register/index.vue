@@ -257,8 +257,7 @@ export default {
      * 下一步
      */
     btnNext() {
-      alert("hhh")
-      this.$router.push('/organizationLogin')
+      this.$router.push('/personalMana/application')
       // this.$refs.form.validate((valid) => {
       //   // this.changeStrength() // 验证密码格式
       //   if (valid && !this.errorFlag1 && !this.errorFlag2 && !this.errorFlag3 && !this.errorFlag4) {

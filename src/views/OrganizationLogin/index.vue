@@ -1,5 +1,5 @@
 <template>
-  <div class="organization-login" :style="`background-image: url(${VUE_APP_LOGO_BASE_URL}bg2.jpg)`">
+  <div class="organization-login" >
     <div class="login-container">
       <div class="login-back">
         <span style="cursor: pointer;" @click="backLogin">
@@ -7,7 +7,7 @@
           {{ $t("返回") }}
         </span>
       </div>
-      <p class="login-title">{{ $t("ZYZZZDL") }}</p>
+      <p class="login-title">{{ $t("志愿者登录") }}</p>
       <el-form ref="form" :model="form" :rules="rules" class="login-form">
         <el-form-item prop="mobile">
           <el-input v-model="form.mobile" @focus="mobileFocus = true" @blur="mobileFocus = false" placeholder="请输入手机号" >
@@ -315,6 +315,7 @@ export default {
   }
 }
 .organization-login {
+  background: #fff url("../../assets/img/bg2.jpg") center top no-repeat;
   width: 100%;
   height: 100vh;
   background-size: cover;

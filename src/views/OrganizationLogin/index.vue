@@ -26,8 +26,8 @@
             </template>
           </el-input>
         </el-form-item>
-        <el-form-item prop="verifyCode" v-if="Config.verificationSwitch === '1'">
-          <el-input v-model="form.verifyCode" class="userName check-code" :placeholder="$t('QSRYZM')">
+        <!-- <el-form-item prop="verifyCode" v-if="Config.verificationSwitch === '1'">
+          <el-input v-model="form.verifyCode" class="userName check-code" :placeholder="$t('忘记密码')">
             <img :src="
                 require(`../../assets/images/vailCode1${
                   form.checkCodeActive ? '-active' : ''
@@ -35,20 +35,20 @@
               " width="16px" height="19px" slot="prepend" />
             <count-down-button :mobile="form.mobile" slot="append"></count-down-button>
           </el-input>
-        </el-form-item>
+        </el-form-item> -->
         <div class="password-container">
           <p
             :class="['remember-password', rememberPassword ? 'active' : '']"
             @click="rememberPassword = !rememberPassword"
           >
-            {{ $t("JJMM") }}
+            {{ $t("记住密码") }}
           </p>
           <p class="forget-password" @click="changeForgetDialog(true)">
-            {{ $t("WJMM") }}
+            {{ $t("忘记密码") }}
           </p>
         </div>
-        <el-button type="primary" class="login-button" @click="openDrag()">{{ $t("LOGIN") }}</el-button>
-        <el-button type="defalut" class="register-button" @click="changeRegisterDialog(true)">{{ $t("REGISTER") }}</el-button>
+        <el-button type="primary" class="login-button" @click="openDrag()">{{ $t("登录") }}</el-button>
+        <el-button type="defalut" class="register-button" @click="changeRegisterDialog(true)">{{ $t("注册") }}</el-button>
       </el-form>
     </div>
     <!-- 忘记密码弹窗 -->
@@ -70,7 +70,7 @@ import apis from "@/apis";
 import md5 from "js-md5";
 import Cookie from "@/assets/js/cookie";
 import drag from "@/components/drag.vue";
-import countDownButton from "@/components/count-down-button.vue";
+// import countDownButton from "@/components/count-down-button.vue";
 
 // import Cookie from "@/assets/js/cookie";
 export default {
@@ -78,7 +78,7 @@ export default {
     forgetDialog,
     registerDialog,
     drag,
-    countDownButton,
+    // countDownButton,
   },
   mounted() {
     this.initLogin();
@@ -357,9 +357,9 @@ export default {
     font-size: 14px;
     cursor: pointer;
     color: #666;
-    // background: url(../../assets/images/remeber.png) left center no-repeat;
+     background: url(../../assets/images/remeber.png) left center no-repeat;
     &.active {
-      // background: url(../../assets/images/remeber-active.png) left center no-repeat;
+       background: url(../../assets/images/remeber-active.png) left center no-repeat;
     }
   }
   .forget-password {

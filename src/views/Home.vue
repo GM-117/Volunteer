@@ -1,10 +1,11 @@
 <template>
   <el-container class="home">
     <el-aside :width="collapse ? '64px' : '210px'" class="asideContainer"
-      :style="`background:url('${VUE_APP_LOGO_BASE_URL}aside0${collapse?'2':'1'}.png'); background-size: 100% 100%`">
+      style="">
       <div class="systemTitle">
-        <img :src="`${VUE_APP_LOGO_BASE_URL}logo-icon.png`" style="width: 129px;" class="img" />
-        <h3 class="title" v-show="!collapse">{{VUE_APP_PRODUCTION_SERVER ? $t('systemName_test') : $t('systemName')}}</h3>
+        <img src="@/assets/img/logo-icon.png" style="width: 129px;" class="img" />
+        <!-- <h3 class="title" v-show="!collapse">{{VUE_APP_PRODUCTION_SERVER ? $t('systemName_test') : $t('systemName')}}</h3> -->
+        <h3 class="title" v-show="!collapse">志愿者管理系统</h3>
       </div>
       <aside-menu
         :data="authority"
@@ -111,6 +112,7 @@ export default Vue.extend({
     padding: 0;
   }
   .asideContainer {
+    background: url('../assets/img/aside01.png'); background-size: 100% 100%;
     position: relative;
     transition: all 0.2s linear;
     overflow: hidden;

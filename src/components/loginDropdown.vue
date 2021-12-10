@@ -5,12 +5,12 @@
     <img class="bell" @click="visibleDialog=!visibleDialog" src="../assets/images/bell.png" alt="" v-if="isShow">
     <el-dropdown>
       <div class="el-dropdown-link">
-        <h2><span class="name">{{$t('welcome')}}，{{NAME}}</span><i class="el-icon-arrow-down el-icon--right"></i></h2>
+        <h2><span class="name">{{$t('欢迎您')}}，{{NAME}}</span><i class="el-icon-arrow-down el-icon--right"></i></h2>
       </div>
       <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item command="c" @click.native.stop="registerEnter">{{$t('ZYZZCYDJRK')}}</el-dropdown-item>
-        <el-dropdown-item command="a" @click.native.stop="modifyPasswordButton">{{$t('change_password')}}</el-dropdown-item>
-        <el-dropdown-item command="b" @click.native.stop="outButton">{{$t('loginOut')}}</el-dropdown-item>
+        <el-dropdown-item command="c" @click.native.stop="registerEnter">{{$t('志愿组织成员登记入口')}}</el-dropdown-item>
+        <el-dropdown-item command="a" @click.native.stop="modifyPasswordButton">{{$t('修改密码')}}</el-dropdown-item>
+        <el-dropdown-item command="b" @click.native.stop="outButton">{{$t('退出')}}</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
   </div>

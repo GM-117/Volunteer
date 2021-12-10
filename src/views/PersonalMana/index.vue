@@ -16,3 +16,22 @@ var component = normalizer(
 )
 
 export default component.exports
+<template>
+  <div>
+    <Application/>
+  </div>
+</template>
+
+<script>
+import Application from './application.vue'
+
+export default {
+  components: {
+    Application
+  }
+}
+</script>
+
+<style>
+
+</style>

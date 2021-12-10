@@ -414,15 +414,15 @@ export default {
   computed: {
     credential_type() {
       let DrowList = []
-      if (this.form.nationality === 'CHN') { // 如果国家/地区是中国，只能选择身份证
-        DrowList = this.DROPDOWNBOX.credential_type.filter(items => items.value === 'CID')
-      } else if (this.form.nationality === 'TPE') { // 国家/地区是中国台北、只能选择台湾居民来往大陆通行证
-        DrowList = this.DROPDOWNBOX.credential_type.filter(items => items.value === 'TWT')
-      } else if (this.form.nationality === 'HKG' || this.form.nationality === 'MAC') { // 国家/地区是中国澳门、中国香港，只能选择港澳居民来往内地通行证
-        DrowList = this.DROPDOWNBOX.credential_type.filter(items => items.value === 'GAT')
-      } else { // 国家/地区除了以上的，只能选择护照了
-        DrowList = this.DROPDOWNBOX.credential_type.filter(items => items.value === 'PAS')
-      }
+      // if (this.form.nationality === 'CHN') { // 如果国家/地区是中国，只能选择身份证
+      //   DrowList = this.DROPDOWNBOX.credential_type.filter(items => items.value === 'CID')
+      // } else if (this.form.nationality === 'TPE') { // 国家/地区是中国台北、只能选择台湾居民来往大陆通行证
+      //   DrowList = this.DROPDOWNBOX.credential_type.filter(items => items.value === 'TWT')
+      // } else if (this.form.nationality === 'HKG' || this.form.nationality === 'MAC') { // 国家/地区是中国澳门、中国香港，只能选择港澳居民来往内地通行证
+      //   DrowList = this.DROPDOWNBOX.credential_type.filter(items => items.value === 'GAT')
+      // } else { // 国家/地区除了以上的，只能选择护照了
+      //   DrowList = this.DROPDOWNBOX.credential_type.filter(items => items.value === 'PAS')
+      // }
       return DrowList
     },
   },

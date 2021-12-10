@@ -23,22 +23,25 @@
         <register-Step-One ref="stepOne" :rules="rules" :isDisabled="isDisabled" :isId="isId"></register-Step-One>
       </div>
       <div v-show="show === '2'">
+        <div>22222</div>
         <register-Step-Two ref="stepTwo" :rules="rules" :isDisabled="isDisabled"></register-Step-Two>
       </div>
       <div v-show="show === '3'">
+        <div>33333</div>
         <register-Step-Three ref="stepThree" :rules="rules" :isDisabled="isDisabled"></register-Step-Three>
       </div>
       <div v-show="show === '4'">
+        <div>4444</div>
         <register-step-four ref="stepFour"></register-step-four>
       </div>
     </div>
     <div class="button-container">
-      <el-button class="btn" v-if="isPlayBack" @click="openDeleteDialog(4)">{{$t('back')}}</el-button>
-      <el-button class="btn" v-else @click="backEvent">{{$t('back')}}</el-button>
-      <el-button class="btn" v-show="show !== '1'" @click="upEvent">{{$t('before')}}</el-button>
-      <el-button class="btn" v-show="isPlaySave" @click="saveEvent">{{$t('save')}}</el-button>
-      <el-button class="btn" v-show="show !== '4'" @click="nextEvent">{{$t('next')}}</el-button>
-      <el-button class="btn" v-show="isPlayConfir" @click="openDeleteDialog(5)">{{$t('comfire')}}</el-button>
+      <el-button class="btn" v-if="isPlayBack" @click="openDeleteDialog(4)">{{$t('返回')}}</el-button>
+      <el-button class="btn" v-else @click="backEvent">{{$t('返回')}}</el-button>
+      <el-button class="btn" v-show="show !== '1'" @click="upEvent">{{$t('上一步')}}</el-button>
+      <el-button class="btn" v-show="isPlaySave" @click="saveEvent">{{$t('保存')}}</el-button>
+      <el-button class="btn" v-show="show !== '4'" @click="nextEvent">{{$t('下一步')}}</el-button>
+      <el-button class="btn" v-show="isPlayConfir" @click="openDeleteDialog(5)">{{$t('提交')}}</el-button>
     </div>
     <!-- 返回、提交提示弹窗 -->
     <confirm-dialog ref="confirmDialog" :show="confirmDialog.visible" :type="confirmDialog.type" @sureDialog="sureConfirmDialog" @closeDialog="changeConfirmDialog"></confirm-dialog>
@@ -342,6 +345,12 @@ export default {
 }
 </style>
 <style lang="less">
+.search-container {
+  height: 50px;
+  display: block;
+  display: grid;
+  border-bottom: 1px dashed #81a6d0;
+}
 // .base-info{
   .set-width {
     width: 100%;

@@ -51,12 +51,12 @@
             </el-col>
             <el-col :span="12" class="col-height">
               <el-form-item :label="$t('英文姓')" class="Form_item" prop="firstName">
-                <el-input size="mini"  v-model.trim="form.firstName" :placeholder="$t('enNamePlaceholder')" clearable @keyup.native="form.firstName=form.firstName.toUpperCase()"></el-input>
+                <el-input size="mini"  v-model.trim="form.firstName" :placeholder="$t('中国内地填写汉语拼音，例如ZHANG')" clearable @keyup.native="form.firstName=form.firstName.toUpperCase()"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="12" class="col-height">
               <el-form-item :label="$t('英文名')" class="Form_item" prop="lastName">
-                <el-input size="mini"  v-model.trim="form.lastName" :placeholder="$t('enNamePlaceholder1')" clearable></el-input>
+                <el-input size="mini"  v-model.trim="form.lastName" :placeholder="$t('中国内地填写汉语拼音，例如JIANGUO')" clearable></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="12" class="col-height">

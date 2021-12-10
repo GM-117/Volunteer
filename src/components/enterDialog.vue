@@ -16,8 +16,8 @@
       center
       width="640px">
       <el-form ref="form" :model="form" label-width="80px" :rules="rules" size="mini">
-        <p class="choice_organization">{{ $t('choice_organization') }}</p>
-        <el-form-item :label="$t('ZYZZ')" prop="id">
+        <p class="choice_organization">{{ $t('如果您是志愿组织成员，请在下方选择您所在的志愿组织') }}</p>
+        <el-form-item :label="$t('志愿组织')" prop="id">
           <el-select v-model="form.id">
             <el-option
               v-for="item in organizationList"
@@ -31,8 +31,8 @@
       </el-form>
       <template slot="footer">
         <!-- 如果没特别需求，统一使用mixin里面的关闭方法 -->
-        <el-button type="info" @click="closeDialog">{{$t('cancel')}}</el-button>
-        <el-button type="primary" @click="sureEvent">{{$t('sure')}}</el-button>
+        <el-button type="info" @click="closeDialog">{{$t('取消')}}</el-button>
+        <el-button type="primary" @click="sureEvent">{{$t('确定')}}</el-button>
       </template>
     </el-dialog>
   </div>

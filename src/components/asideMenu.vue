@@ -16,16 +16,16 @@
         <el-submenu
           :index="item.url"
           :key="item.id"
-          v-if="item.children.length > 0 && item.isScreen === 'Y'">
+          v-if="item.children1.length > 0 && item.isScreen === 'Y'">
           <template slot="title">
             <img src="../assets/images/personalMana.png" style="width: 20px; margin-right: 7px;">
             <span style="color: #fff;">{{item.name}}</span>
           </template>
-          <template v-for="children_item in item.children">
+          <template v-for="children_item in item.children1">
             <el-menu-item :index="children_item.url" :key="children_item.id" v-if="children_item.isScreen === 'Y'">{{children_item.name}}</el-menu-item>
           </template>
         </el-submenu>
-        <el-menu-item :index="item.url" :key="item.id" v-if="item.children.length === 0 && item.isScreen === 'Y'">
+        <el-menu-item :index="item.url" :key="item.id" v-if="item.children1.length === 0 && item.isScreen === 'Y'">
           <i class="el-icon-menu"></i>
           <span slot="title">{{item.name}}</span>
         </el-menu-item>
@@ -44,30 +44,31 @@ export default {
           id: '/personalMana',
           name: '志愿者个人管理',
           isScreen: 'Y',
-          children:[{
-            url: 'application',
+          children1:[{
+            url: '/personalMana/application',
             id: 'application',
             isScreen: 'Y',
             name: '我的报名'
           },
-          {
-            url: 'job',
-            id: 'job',
-            isScreen: 'Y',
-            name: '我的岗位'
-          },
-          {
-            url: 'certificate',
-            id: 'certificate',
-            isScreen: 'Y',
-            name: '我的证书'
-          },
-          {
-            url: 'allege',
-            id: 'allege',
-            isScreen: 'Y',
-            name: '证件申诉'
-          }],
+          // {
+          //   url: 'job',
+          //   id: 'job',
+          //   isScreen: 'Y',
+          //   name: '我的岗位'
+          // },
+          // {
+          //   url: 'certificate',
+          //   id: 'certificate',
+          //   isScreen: 'Y',
+          //   name: '我的证书'
+          // },
+          // {
+          //   url: 'allege',
+          //   id: 'allege',
+          //   isScreen: 'Y',
+          //   name: '证件申诉'
+          // }
+          ],
         },
       ]
     }

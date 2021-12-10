@@ -13,7 +13,7 @@
     </el-aside>
     <el-container style="height:100vh;overfloat-y:auto;">
       <el-header class="header">
-        <header-tab class="headerLeft"></header-tab>
+        <!-- <header-tab class="headerLeft"></header-tab> -->
         <login-dropdown class="headerRight" @registerEnter="changeEnterDialog" @updatePassword="changeChangeDialog"></login-dropdown>
         <!-- 修改密码弹窗 -->
         <change-dialog ref="changeDialog" :Language="Language" :show="changeDialog.visible" @closeDialog="changeChangeDialog"></change-dialog>
@@ -31,7 +31,7 @@
 import Vue from 'vue';
 import { mapState } from 'vuex';
 import asideMenu from '@/components/asideMenu.vue';
-import headerTab from '@/components/headerTab.vue';
+// import headerTab from '@/components/headerTab.vue';
 import loginDropdown from '@/components/loginDropdown.vue';
 import changeDialog from './dialog/changeDialog.vue'
 import enterDialog from '@/components/enterDialog.vue'
@@ -40,7 +40,7 @@ export default Vue.extend({
   name: 'home',
   components: {
     asideMenu,
-    headerTab,
+    // headerTab,
     loginDropdown,
     changeDialog,
     enterDialog,

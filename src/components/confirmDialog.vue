@@ -60,7 +60,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-@import url('../../src/assets/styles/mixin.scoped.less');
+// @import url('../../src/assets/styles/mixin.scoped.less');
 .dialog-wrap{
   display: grid;
   justify-content: center;
@@ -70,7 +70,7 @@ export default {
   .el-icon-warning{
     font-size: 50px;
     margin: 0 auto;
-    color: @confirmDialog-icon-color;
+    // color: @confirmDialog-icon-color;
   }
   p{
     line-height: 40px;

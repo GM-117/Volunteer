@@ -41,30 +41,30 @@ export default {
       data: [
         {
           url: '/personalMana',
-          id: '1',
+          id: '/personalMana',
           name: '志愿者个人管理',
           isScreen: 'Y',
           children:[{
             url: 'application',
-            id: '1-1',
+            id: 'application',
             isScreen: 'Y',
             name: '我的报名'
           },
           {
             url: 'job',
-            id: '1-2',
+            id: 'job',
             isScreen: 'Y',
             name: '我的岗位'
           },
           {
             url: 'certificate',
-            id: '1-3',
+            id: 'certificate',
             isScreen: 'Y',
             name: '我的证书'
           },
           {
             url: 'allege',
-            id: '1-4',
+            id: 'allege',
             isScreen: 'Y',
             name: '证件申诉'
           }],

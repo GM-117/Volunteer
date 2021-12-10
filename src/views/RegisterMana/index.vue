@@ -1,4 +1,19 @@
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('keep-alive',[_c('router-view')],1)],1)}
-var staticRenderFns = []
+<template>
+  <div>
+    <BaseInfo/>
+  </div>
+</template>
 
-export { render, staticRenderFns }
+<script>
+import BaseInfo from './BaseInfo/index.vue'
+
+export default {
+  components: {
+    BaseInfo
+  }
+}
+</script>
+
+<style>
+
+</style>

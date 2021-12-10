@@ -1,8 +1,854 @@
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"step-four"},[_c('el-form',{ref:"form",attrs:{"model":_vm.form,"label-width":"110px","disabled":""}},[_c('div',{staticClass:"title"},[_vm._v("①基本信息")]),_c('el-row',[_c('el-col',{attrs:{"span":16}},[_c('el-row',[_c('el-col',{staticClass:"col-height",attrs:{"span":12}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('applyType'),"prop":"applyType"}},[_c('el-radio-group',{model:{value:(_vm.form.applyType),callback:function ($$v) {_vm.$set(_vm.form, "applyType", $$v)},expression:"form.applyType"}},_vm._l((_vm.DROPDOWNBOX.zyz_apply_type),function(item,index){return _c('el-radio',{key:index,attrs:{"label":item.value}},[_vm._v(_vm._s(item.text))])}),1)],1)],1),_c('el-col',{staticClass:"col-height",attrs:{"span":12}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('Nationality'),"prop":"nationality"}},[_c('el-select',{staticClass:"set-width",attrs:{"filter":"","clearable":""},model:{value:(_vm.form.nationality),callback:function ($$v) {_vm.$set(_vm.form, "nationality", $$v)},expression:"form.nationality"}},_vm._l((_vm.country),function(item){return _c('el-option',{key:("nationality" + (item.countryCode)),attrs:{"value":item.countryCode,"label":item.countryName}})}),1)],1)],1),_c('div',[_c('el-popover',{attrs:{"placement":"right","width":"520","trigger":"click"}},[_c('p',[_vm._v("中文姓：中国内地及港澳台申请人必填。其他有汉字姓名的申请人自愿填写。 ")]),_c('p',{staticStyle:{"padding-left":"4em"}},[_vm._v("中国内地申请人用简体汉字填写；港澳台申请人用繁体汉字填写。")]),_c('p',{staticStyle:{"padding-left":"4em"}},[_vm._v("填写内容应当与用于注册的身份证件上显示的汉字姓一致。")]),_c('p',{staticStyle:{"padding-left":"4em"}},[_vm._v("示例：张。")]),_c('p',[_vm._v("中文名：中国内地及港澳台申请人必填。其他有汉字姓名的申请人自愿填写。")]),_c('p',{staticStyle:{"padding-left":"4em"}},[_vm._v("中国内地申请人用简体汉字填写；港澳台申请人用繁体汉字填写。")]),_c('p',{staticStyle:{"padding-left":"4em"}},[_vm._v("填写内容应当与用于注册的身份证件上显示的汉字姓一致。")]),_c('p',{staticStyle:{"padding-left":"4em"}},[_vm._v("示例：建国。")]),_c('p',[_vm._v("英文姓：所有申请人必填。请用大写英文字母填写，中国内地申请人填写汉语拼音。")]),_c('p',{staticStyle:{"padding-left":"4em"}},[_vm._v("示例：ZHANG。")]),_c('p',[_vm._v("英文名：所有申请人必填。请用大写英文字母填写，中国内地申请人填写汉语拼音。")]),_c('p',{staticStyle:{"padding-left":"4em"}},[_vm._v("示例：JIANGUO。")])])],1),_c('el-col',{staticClass:"col-height",attrs:{"span":12}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('chnLastName'),"prop":"chnLastName"}},[_c('el-input',{attrs:{"size":"mini","clearable":"","placeholder":"请填写姓名中的姓氏，例如张"},model:{value:(_vm.form.chnLastName),callback:function ($$v) {_vm.$set(_vm.form, "chnLastName", (typeof $$v === 'string'? $$v.trim(): $$v))},expression:"form.chnLastName"}})],1)],1),_c('el-col',{staticClass:"col-height",attrs:{"span":12}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('ZWM'),"prop":"chnFirstName"}},[_c('el-input',{attrs:{"size":"mini","clearable":"","placeholder":"请填写姓名中的名字，例如建国"},model:{value:(_vm.form.chnFirstName),callback:function ($$v) {_vm.$set(_vm.form, "chnFirstName", (typeof $$v === 'string'? $$v.trim(): $$v))},expression:"form.chnFirstName"}})],1)],1),_c('el-col',{staticClass:"col-height",attrs:{"span":12}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('firstName'),"prop":"firstName"}},[_c('el-input',{attrs:{"size":"mini","placeholder":_vm.$t('enNamePlaceholder'),"clearable":""},nativeOn:{"keyup":function($event){_vm.form.firstName=_vm.form.firstName.toUpperCase()}},model:{value:(_vm.form.firstName),callback:function ($$v) {_vm.$set(_vm.form, "firstName", (typeof $$v === 'string'? $$v.trim(): $$v))},expression:"form.firstName"}})],1)],1),_c('el-col',{staticClass:"col-height",attrs:{"span":12}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('YWM'),"prop":"lastName"}},[_c('el-input',{attrs:{"size":"mini","placeholder":_vm.$t('enNamePlaceholder1'),"clearable":""},model:{value:(_vm.form.lastName),callback:function ($$v) {_vm.$set(_vm.form, "lastName", (typeof $$v === 'string'? $$v.trim(): $$v))},expression:"form.lastName"}})],1)],1),_c('el-col',{staticClass:"col-height",attrs:{"span":12}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('ZJLX'),"prop":"credentialType"}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},model:{value:(_vm.form.credentialType),callback:function ($$v) {_vm.$set(_vm.form, "credentialType", $$v)},expression:"form.credentialType"}},_vm._l((_vm.credential_type),function(item){return _c('el-option',{key:("credentialType" + (item.value)),attrs:{"value":item.value,"label":item.text}})}),1)],1)],1),_c('el-col',{staticClass:"col-height",staticStyle:{"position":"relative"},attrs:{"span":12}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('ZJH'),"prop":"credentialNo"}},[_c('el-input',{attrs:{"size":"mini","clearable":""},model:{value:(_vm.form.credentialNo),callback:function ($$v) {_vm.$set(_vm.form, "credentialNo", (typeof $$v === 'string'? $$v.trim(): $$v))},expression:"form.credentialNo"}})],1)],1),_c('el-col',{staticClass:"col-height",attrs:{"span":12}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('ZJYXQ'),"prop":"credentialPeriod"}},[_c('el-date-picker',{staticStyle:{"width":"100%"},attrs:{"type":"date","value-format":"yyyy-MM-dd","placeholder":"选择日期"},model:{value:(_vm.form.credentialPeriod),callback:function ($$v) {_vm.$set(_vm.form, "credentialPeriod", $$v)},expression:"form.credentialPeriod"}})],1)],1),_c('el-col',{staticClass:"col-height",attrs:{"span":12}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('birthday'),"prop":"birth"}},[_c('el-date-picker',{staticStyle:{"width":"100%"},attrs:{"disabled":_vm.form.credentialType==='CID',"type":"date","value-format":"yyyy-MM-dd","placeholder":"选择日期","picker-options":{
-                disabledDate: function (date) {
-                  return _vm.form.credentialType!=='CID' ? new Date(date).getTime() > new Date(2002, 5, 30).getTime(): false
-                }
-              }},model:{value:(_vm.form.birth),callback:function ($$v) {_vm.$set(_vm.form, "birth", $$v)},expression:"form.birth"}})],1)],1)],1)],1),_c('el-col',{attrs:{"span":7,"offset":1}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label-width":"0","prop":"headPicUrl"}},[_c('div',{staticClass:"imgDiv"},[_c('div',{staticClass:"pictureBG"},[_c('img',{attrs:{"src":_vm.returnPicUrl(_vm.form.url),"alt":""}})]),_c('div',{staticClass:"pWidth"},[_c('p',[_vm._v("1、申请人本人近期（6个月内）正面免冠彩色照片；")]),_c('p',[_vm._v("2、照片背景为白色，不得使用其它底色；不得使用艺术照片、翻拍照片；")]),_c('p',[_vm._v("3、照片尺寸为35mm×45mm；像素为413×531，无框；")]),_c('p',[_vm._v("4、图像文件格式为JPG；文件大小100K-300K字节，分辨率不低于300dpi。")])])])])],1)],1),_c('el-row',[_c('el-col',{staticClass:"col-height",attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('XB'),"prop":"sex"}},[_c('el-radio-group',{model:{value:(_vm.form.sex),callback:function ($$v) {_vm.$set(_vm.form, "sex", $$v)},expression:"form.sex"}},_vm._l((_vm.DROPDOWNBOX.sex),function(item,index){return _c('el-radio',{key:index,attrs:{"disabled":_vm.form.credentialType==='CID',"label":item.value}},[_vm._v(_vm._s(item.text))])}),1)],1)],1),_c('el-col',{staticClass:"col-height",attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('volunteerType'),"label-width":"150px","prop":"volunteerType"}},[_c('el-radio-group',{model:{value:(_vm.form.volunteerType),callback:function ($$v) {_vm.$set(_vm.form, "volunteerType", $$v)},expression:"form.volunteerType"}},_vm._l((_vm.DROPDOWNBOX.yes_no_label),function(item,index){return _c('el-radio',{key:index,attrs:{"label":item.value}},[_vm._v(_vm._s(item.text))])}),1)],1)],1),_c('el-col',{staticClass:"col-height",attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('blood-type'),"prop":"blood"}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},model:{value:(_vm.form.blood),callback:function ($$v) {_vm.$set(_vm.form, "blood", $$v)},expression:"form.blood"}},_vm._l((_vm.DROPDOWNBOX.blood),function(item){return _c('el-option',{key:("blood" + (item.value)),attrs:{"value":item.value,"label":item.text}})}),1)],1)],1),(_vm.form.volunteerType=='Y')?_c('el-col',{staticClass:"col-height",attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('schoolName'),"prop":"school"}},[_c('el-select',{staticClass:"set-width",attrs:{"filterable":"","clearable":""},model:{value:(_vm.form.school),callback:function ($$v) {_vm.$set(_vm.form, "school", $$v)},expression:"form.school"}},_vm._l((_vm.height_schools),function(item){return _c('el-option',{key:("school" + (item.value)),attrs:{"value":item.value,"label":item.text}})}),1)],1)],1):_vm._e(),(_vm.form.volunteerType=='Y')?_c('el-col',{staticClass:"col-height",attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('admission'),"prop":"enrollmentDate"}},[_c('el-date-picker',{staticStyle:{"width":"100%"},attrs:{"type":"month","value-format":"yyyy-MM","placeholder":"选择年月"},model:{value:(_vm.form.enrollmentDate),callback:function ($$v) {_vm.$set(_vm.form, "enrollmentDate", $$v)},expression:"form.enrollmentDate"}})],1)],1):_vm._e(),_c('el-col',{staticClass:"col-height",attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('ZYZZ'),"prop":"organizationId"}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},model:{value:(_vm.form.organizationId),callback:function ($$v) {_vm.$set(_vm.form, "organizationId", $$v)},expression:"form.organizationId"}},_vm._l((_vm.organizationList),function(item){return _c('el-option',{key:("organization" + (item.value)),attrs:{"value":item.value,"label":item.text}})}),1)],1)],1),(_vm.form.volunteerType=='Y')?_c('el-col',{staticClass:"col-height",attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('college'),"prop":"faculty"}},[_c('el-select',{staticClass:"set-width",attrs:{"filterable":"","clearable":""},model:{value:(_vm.form.faculty),callback:function ($$v) {_vm.$set(_vm.form, "faculty", $$v)},expression:"form.faculty"}},_vm._l((_vm.DROPDOWNBOX.zyz_faculty),function(item){return _c('el-option',{key:("faculty" + (item.value)),attrs:{"value":item.value,"label":item.text}})}),1)],1)],1):_vm._e(),(_vm.form.volunteerType=='Y')?_c('el-col',{staticClass:"col-height",attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('major'),"prop":"major"}},[_c('el-select',{staticClass:"set-width",attrs:{"filterable":"","clearable":""},model:{value:(_vm.form.major),callback:function ($$v) {_vm.$set(_vm.form, "major", $$v)},expression:"form.major"}},_vm._l((_vm.DROPDOWNBOX.major),function(item){return _c('el-option',{key:("major" + (item.value)),attrs:{"value":item.value,"label":item.text}})}),1)],1)],1):_vm._e(),(_vm.form.volunteerType=='Y')?_c('el-col',{staticClass:"col-height",attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('student-Id'),"prop":"studentNumber"}},[_c('el-input',{attrs:{"size":"mini","clearable":""},model:{value:(_vm.form.studentNumber),callback:function ($$v) {_vm.$set(_vm.form, "studentNumber", (typeof $$v === 'string'? $$v.trim(): $$v))},expression:"form.studentNumber"}})],1)],1):_vm._e(),(_vm.form.volunteerType=='N')?_c('el-col',{staticClass:"col-height",attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('SZDW'),"prop":"company"}},[_c('el-input',{attrs:{"size":"mini","clearable":""},model:{value:(_vm.form.company),callback:function ($$v) {_vm.$set(_vm.form, "company", (typeof $$v === 'string'? $$v.trim(): $$v))},expression:"form.company"}})],1)],1):_vm._e(),(_vm.form.volunteerType=='N')?_c('el-col',{staticClass:"col-height",attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('occupation'),"prop":"occupation"}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},model:{value:(_vm.form.occupation),callback:function ($$v) {_vm.$set(_vm.form, "occupation", $$v)},expression:"form.occupation"}},_vm._l((_vm.DROPDOWNBOX.zyz_occupation),function(item){return _c('el-option',{key:("health" + (item.value)),attrs:{"value":item.value,"label":item.text}})}),1)],1)],1):_vm._e(),_c('el-col',{staticClass:"col-height",attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('speciality'),"prop":"speciality"}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},model:{value:(_vm.form.speciality),callback:function ($$v) {_vm.$set(_vm.form, "speciality", $$v)},expression:"form.speciality"}},_vm._l((_vm.DROPDOWNBOX.speciality),function(item){return _c('el-option',{key:("speciality" + (item.value)),attrs:{"value":item.value,"label":item.text}})}),1)],1)],1),(_vm.form.volunteerType=='N')?_c('el-col',{staticClass:"col-height",attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('edu-background'),"prop":"heghestEducation"}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},model:{value:(_vm.form.heghestEducation),callback:function ($$v) {_vm.$set(_vm.form, "heghestEducation", $$v)},expression:"form.heghestEducation"}},_vm._l((_vm.DROPDOWNBOX.education),function(item){return _c('el-option',{key:("health" + (item.value)),attrs:{"value":item.value,"label":item.text}})}),1)],1)],1):_vm._e(),_c('el-col',{staticClass:"col-height",attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('health'),"prop":"health"}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},model:{value:(_vm.form.health),callback:function ($$v) {_vm.$set(_vm.form, "health", $$v)},expression:"form.health"}},_vm._l((_vm.DROPDOWNBOX.health),function(item){return _c('el-option',{key:("health" + (item.value)),attrs:{"value":item.value,"label":item.text}})}),1)],1)],1),_c('el-col',{staticClass:"col-height",staticStyle:{"position":"relative"},attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('clothSize1'),"prop":"clothesSize"}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},model:{value:(_vm.form.clothesSize),callback:function ($$v) {_vm.$set(_vm.form, "clothesSize", $$v)},expression:"form.clothesSize"}},_vm._l((_vm.DROPDOWNBOX.clothes_size),function(item){return _c('el-option',{key:("clothesSize" + (item.value)),attrs:{"value":item.value,"label":item.text}})}),1)],1)],1),_c('el-col',{staticClass:"col-height",attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":((_vm.$t('tall')) + "(CM)"),"prop":"height"}},[_c('el-input',{attrs:{"size":"mini","clearable":"","type":"number"},model:{value:(_vm.form.height),callback:function ($$v) {_vm.$set(_vm.form, "height", (typeof $$v === 'string'? $$v.trim(): $$v))},expression:"form.height"}})],1)],1),_c('el-col',{staticClass:"col-height",attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":((_vm.$t('weight')) + "(KG)"),"prop":"weight"}},[_c('el-input',{attrs:{"size":"mini","clearable":"","type":"number"},model:{value:(_vm.form.weight),callback:function ($$v) {_vm.$set(_vm.form, "weight", (typeof $$v === 'string'? $$v.trim(): $$v))},expression:"form.weight"}})],1)],1),_c('el-col',{staticClass:"col-height",staticStyle:{"position":"relative"},attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('shoes'),"prop":"shoesSize"}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},model:{value:(_vm.form.shoesSize),callback:function ($$v) {_vm.$set(_vm.form, "shoesSize", $$v)},expression:"form.shoesSize"}},_vm._l((_vm.DROPDOWNBOX.shoes_size),function(item){return _c('el-option',{key:("shoesSize" + (item.value)),attrs:{"value":item.value,"label":item.text}})}),1)],1)],1),_c('el-col',{staticClass:"col-height",staticStyle:{"position":"relative"},attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('trouserSize'),"prop":"trouserSize"}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},model:{value:(_vm.form.trouserSize),callback:function ($$v) {_vm.$set(_vm.form, "trouserSize", $$v)},expression:"form.trouserSize"}},_vm._l((_vm.DROPDOWNBOX.trouser_size),function(item){return _c('el-option',{key:("trouserSize" + (item.value)),attrs:{"value":item.value,"label":item.text}})}),1)],1)],1)],1),_c('el-row',[_c('el-col',{staticClass:"col-height",attrs:{"span":12}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('disabilityFlag'),"label-width":"120px","prop":"disabilityFlag"}},[_c('el-radio-group',{model:{value:(_vm.form.disabilityFlag),callback:function ($$v) {_vm.$set(_vm.form, "disabilityFlag", $$v)},expression:"form.disabilityFlag"}},_vm._l((_vm.DROPDOWNBOX.yes_no_label),function(item,index){return _c('el-radio',{key:index,attrs:{"label":item.value}},[_vm._v(_vm._s(item.text))])}),1)],1)],1)],1),(_vm.form.disabilityFlag === 'Y')?_c('el-row',[_c('el-col',{attrs:{"span":24}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label-width":"100px","prop":"disabilityType"}},[_c('el-checkbox-group',{model:{value:(_vm.form.disabilityType),callback:function ($$v) {_vm.$set(_vm.form, "disabilityType", $$v)},expression:"form.disabilityType"}},_vm._l((_vm.DROPDOWNBOX.zyz_disability_type),function(item,index){return _c('el-checkbox',{key:index,attrs:{"label":item.value}},[_vm._v(_vm._s(item.text))])}),1)],1)],1)],1):_vm._e(),_c('el-row',[_c('el-col',{staticClass:"col-height",attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('politicalStatus'),"prop":"politicalOutlook"}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},model:{value:(_vm.form.politicalOutlook),callback:function ($$v) {_vm.$set(_vm.form, "politicalOutlook", $$v)},expression:"form.politicalOutlook"}},_vm._l((_vm.DROPDOWNBOX.political_outlook),function(item){return _c('el-option',{key:("politicalOutlook" + (item.value)),attrs:{"value":item.value,"label":item.text}})}),1)],1)],1),_c('el-col',{staticClass:"col-height",attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('Nation'),"prop":"nation"}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},model:{value:(_vm.form.nation),callback:function ($$v) {_vm.$set(_vm.form, "nation", $$v)},expression:"form.nation"}},_vm._l((_vm.DROPDOWNBOX.nation),function(item){return _c('el-option',{key:("nation" + (item.value)),attrs:{"value":item.value,"label":item.text}})}),1)],1)],1)],1),_c('el-row',[_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('YFPGW')}},[_c('el-select',{staticStyle:{"width":"100%"},attrs:{"clearable":"","disabled":""},model:{value:(_vm.form.postCode),callback:function ($$v) {_vm.$set(_vm.form, "postCode", $$v)},expression:"form.postCode"}},_vm._l((_vm.DROPDOWNBOX.zyz_post),function(item){return _c('el-option',{key:item.value,attrs:{"value":item.value,"label":item.text}})}),1)],1)],1),_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('XQDW')}},[_c('el-select',{staticStyle:{"width":"100%"},attrs:{"clearable":"","disabled":""},model:{value:(_vm.form.unit),callback:function ($$v) {_vm.$set(_vm.form, "unit", $$v)},expression:"form.unit"}},_vm._l((_vm.units),function(item){return _c('el-option',{key:item.value,attrs:{"value":item.value,"label":item.text}})}),1)],1)],1)],1),_c('div',{staticClass:"title"},[_vm._v("②联系信息")]),_c('el-row',[_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('XJZSE'),"prop":"domicileProvince"}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},on:{"change":_vm.changedomicileProvince},model:{value:(_vm.form.domicileProvince),callback:function ($$v) {_vm.$set(_vm.form, "domicileProvince", $$v)},expression:"form.domicileProvince"}},_vm._l((_vm.province),function(item){return _c('el-option',{key:("domicileProvince" + (item.provinceCode)),attrs:{"value":item.provinceCode,"label":item.provinceName}})}),1)],1)],1),_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('XJZSI'),"prop":"domicileCity"}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},on:{"change":_vm.changeDomicileCity},model:{value:(_vm.form.domicileCity),callback:function ($$v) {_vm.$set(_vm.form, "domicileCity", $$v)},expression:"form.domicileCity"}},_vm._l((_vm.domicileCity),function(item){return _c('el-option',{key:("domicileCity" + (item.cityCode)),attrs:{"value":item.cityCode,"label":item.cityName}})}),1)],1)],1),_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('XJZQ')}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},model:{value:(_vm.form.domicileArea),callback:function ($$v) {_vm.$set(_vm.form, "domicileArea", $$v)},expression:"form.domicileArea"}},_vm._l((_vm.domicileArea),function(item){return _c('el-option',{key:("domicileArea" + (item.areaCode)),attrs:{"value":item.areaCode,"label":item.areaName}})}),1)],1)],1)],1),_c('el-row',[_c('el-col',{attrs:{"span":24}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('XJZXXDZ'),"prop":"domicileAddress"}},[_c('el-input',{attrs:{"size":"mini","clearable":""},model:{value:(_vm.form.domicileAddress),callback:function ($$v) {_vm.$set(_vm.form, "domicileAddress", (typeof $$v === 'string'? $$v.trim(): $$v))},expression:"form.domicileAddress"}})],1)],1)],1),_c('el-row',[_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('HJSE'),"prop":"censusProvince"}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},on:{"change":_vm.changeCensusProvince},model:{value:(_vm.form.censusProvince),callback:function ($$v) {_vm.$set(_vm.form, "censusProvince", $$v)},expression:"form.censusProvince"}},_vm._l((_vm.province),function(item){return _c('el-option',{key:("censusProvince" + (item.provinceCode)),attrs:{"value":item.provinceCode,"label":item.provinceName}})}),1)],1)],1),_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('HJSI'),"prop":"censusCity"}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},on:{"change":_vm.changeCensusCity},model:{value:(_vm.form.censusCity),callback:function ($$v) {_vm.$set(_vm.form, "censusCity", $$v)},expression:"form.censusCity"}},_vm._l((_vm.censusCity),function(item){return _c('el-option',{key:("censusCity" + (item.cityCode)),attrs:{"value":item.cityCode,"label":item.cityName}})}),1)],1)],1),_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('HJQ')}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},model:{value:(_vm.form.censusArea),callback:function ($$v) {_vm.$set(_vm.form, "censusArea", $$v)},expression:"form.censusArea"}},_vm._l((_vm.censusArea),function(item){return _c('el-option',{key:("censusArea" + (item.areaCode)),attrs:{"value":item.areaCode,"label":item.areaName}})}),1)],1)],1)],1),_c('el-row',[_c('el-col',{attrs:{"span":24}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('HJXXDZ'),"prop":"censusAddress"}},[_c('el-input',{attrs:{"size":"mini","clearable":"","placeholder":"填写内容必须与户籍所在地址一致！"},model:{value:(_vm.form.censusAddress),callback:function ($$v) {_vm.$set(_vm.form, "censusAddress", (typeof $$v === 'string'? $$v.trim(): $$v))},expression:"form.censusAddress"}})],1)],1)],1),_c('el-row',[_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('QQ'),"prop":"qq"}},[_c('el-input',{attrs:{"size":"mini","clearable":""},model:{value:(_vm.form.qq),callback:function ($$v) {_vm.$set(_vm.form, "qq", (typeof $$v === 'string'? $$v.trim(): $$v))},expression:"form.qq"}})],1)],1),_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('wechat'),"prop":"wechat"}},[_c('el-input',{attrs:{"size":"mini","clearable":""},model:{value:(_vm.form.wechat),callback:function ($$v) {_vm.$set(_vm.form, "wechat", (typeof $$v === 'string'? $$v.trim(): $$v))},expression:"form.wechat"}})],1)],1),_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('mail'),"prop":"email"}},[_c('el-input',{attrs:{"size":"mini","clearable":""},model:{value:(_vm.form.email),callback:function ($$v) {_vm.$set(_vm.form, "email", (typeof $$v === 'string'? $$v.trim(): $$v))},expression:"form.email"}})],1)],1)],1),_c('el-row',[_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('emergency-contacter'),"prop":"emergencyContact"}},[_c('el-input',{attrs:{"size":"mini","clearable":""},model:{value:(_vm.form.emergencyContact),callback:function ($$v) {_vm.$set(_vm.form, "emergencyContact", (typeof $$v === 'string'? $$v.trim(): $$v))},expression:"form.emergencyContact"}})],1)],1),_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('emergency-contact'),"prop":"emergencyContactPhone"}},[_c('el-input',{attrs:{"size":"mini","clearable":""},on:{"blur":_vm.differentMoible},model:{value:(_vm.form.emergencyContactPhone),callback:function ($$v) {_vm.$set(_vm.form, "emergencyContactPhone", (typeof $$v === 'string'? $$v.trim(): $$v))},expression:"form.emergencyContactPhone"}})],1)],1)],1),_c('div',{staticClass:"title"},[_vm._v("③技能信息")]),_c('el-row',[_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('Language'),"prop":"foreignLanguage"}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},model:{value:(_vm.form.foreignLanguage),callback:function ($$v) {_vm.$set(_vm.form, "foreignLanguage", $$v)},expression:"form.foreignLanguage"}},_vm._l((_vm.DROPDOWNBOX.foreign_language),function(item){return _c('el-option',{key:item.value,attrs:{"value":item.value,"label":item.text}})}),1)],1)],1),_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('langLevel'),"prop":"languageLevel"}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},model:{value:(_vm.form.languageLevel),callback:function ($$v) {_vm.$set(_vm.form, "languageLevel", $$v)},expression:"form.languageLevel"}},_vm._l((_vm.DROPDOWNBOX.language_level),function(item){return _c('el-option',{key:item.value,attrs:{"value":item.value,"label":item.text}})}),1)],1)],1),_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('chineseLevel'),"prop":"chineseLevel"}},[_c('el-select',{staticClass:"set-width",attrs:{"clearable":""},model:{value:(_vm.form.chineseLevel),callback:function ($$v) {_vm.$set(_vm.form, "chineseLevel", $$v)},expression:"form.chineseLevel"}},_vm._l((_vm.DROPDOWNBOX.chinese_level),function(item){return _c('el-option',{key:item.value,attrs:{"value":item.value,"label":item.text}})}),1)],1)],1)],1),_c('el-row',[_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label":_vm.$t('volunteerExp'),"prop":"experienceFlag"}},[_c('el-radio-group',{model:{value:(_vm.form.experienceFlag),callback:function ($$v) {_vm.$set(_vm.form, "experienceFlag", $$v)},expression:"form.experienceFlag"}},[_c('el-radio',{attrs:{"label":'1'}},[_vm._v(_vm._s(_vm.$t('yes')))]),_c('el-radio',{attrs:{"label":'0'}},[_vm._v(_vm._s(_vm.$t('no')))])],1)],1)],1)],1),_c('el-row',{directives:[{name:"show",rawName:"v-show",value:(_vm.form.experienceFlag === '1'),expression:"form.experienceFlag === '1'"}]},[_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item"},[_c('span',[_vm._v("参与日期")])])],1),_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item"},[_c('span',[_vm._v("赛会活动")])])],1),_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item"},[_c('span',[_vm._v("服务岗位")])])],1)],1),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.form.experienceFlag === '1'),expression:"form.experienceFlag === '1'"}]},_vm._l((_vm.form.experience),function(item,index){return _c('el-row',{key:index},[_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label-width":"30px"}},[_c('el-date-picker',{staticStyle:{"width":"100%"},attrs:{"type":"date","value-format":"yyyy-MM-dd","placeholder":"选择日期"},model:{value:(item.date),callback:function ($$v) {_vm.$set(item, "date", $$v)},expression:"item.date"}})],1)],1),_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label-width":"30px"}},[_c('el-input',{attrs:{"size":"mini","clearable":""},model:{value:(item.activity),callback:function ($$v) {_vm.$set(item, "activity", (typeof $$v === 'string'? $$v.trim(): $$v))},expression:"item.activity"}})],1)],1),_c('el-col',{attrs:{"span":8}},[_c('el-form-item',{staticClass:"Form_item",attrs:{"label-width":"30px"}},[_c('el-input',{attrs:{"size":"mini","clearable":""},model:{value:(item.servicePost),callback:function ($$v) {_vm.$set(item, "servicePost", (typeof $$v === 'string'? $$v.trim(): $$v))},expression:"item.servicePost"}})],1)],1)],1)}),1)],1)],1)}
-var staticRenderFns = []
+<template>
+  <div class="step-four">
+    <el-form ref="form" :model="form" label-width="110px" disabled>
+      <div class="title">①基本信息</div>
+      <el-row>
+        <el-col :span="16">
+          <el-row>
+            <el-col :span="12" class="col-height">
+              <el-form-item :label="$t('applyType')" class="Form_item" prop="applyType">
+                <el-radio-group v-model="form.applyType">
+                  <el-radio v-for="(item, index) in DROPDOWNBOX.zyz_apply_type" :key="index" :label="item.value">{{item.text}}</el-radio>
+                </el-radio-group>
+              </el-form-item>
+            </el-col>
+            <el-col :span="12" class="col-height">
+              <el-form-item :label="$t('Nationality')" class="Form_item" prop="nationality">
+                <el-select v-model="form.nationality" filter clearable class="set-width">
+                  <el-option v-for="item in country" :key="`nationality${item.countryCode}`" :value="item.countryCode" :label="item.countryName"></el-option>
+                </el-select>
+              </el-form-item>
+            </el-col>
+            <div>
+              <el-popover
+                placement="right"
+                width="520"
+                trigger="click">
+                <!-- <el-button slot="reference" class="refer-style">姓名填写不规范？请点击这里!</el-button> -->
+                <p>中文姓：中国内地及港澳台申请人必填。其他有汉字姓名的申请人自愿填写。 </p>
+                <p style="padding-left:4em;">中国内地申请人用简体汉字填写；港澳台申请人用繁体汉字填写。</p>
+                <p style="padding-left:4em;">填写内容应当与用于注册的身份证件上显示的汉字姓一致。</p>
+                <p style="padding-left:4em;">示例：张。</p>
+                <p>中文名：中国内地及港澳台申请人必填。其他有汉字姓名的申请人自愿填写。</p>
+                <p  style="padding-left:4em;">中国内地申请人用简体汉字填写；港澳台申请人用繁体汉字填写。</p>
+                <p  style="padding-left:4em;">填写内容应当与用于注册的身份证件上显示的汉字姓一致。</p>
+                <p style="padding-left:4em;">示例：建国。</p>
+                <p>英文姓：所有申请人必填。请用大写英文字母填写，中国内地申请人填写汉语拼音。</p>
+                <p style="padding-left:4em;">示例：ZHANG。</p>
+                <p>英文名：所有申请人必填。请用大写英文字母填写，中国内地申请人填写汉语拼音。</p>
+                <p style="padding-left:4em;">示例：JIANGUO。</p>
+              </el-popover>
+            </div>
+            <el-col :span="12" class="col-height">
+              <el-form-item :label="$t('chnLastName')" class="Form_item" prop="chnLastName">
+                <el-input size="mini"  v-model.trim="form.chnLastName" clearable placeholder="请填写姓名中的姓氏，例如张"></el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="12" class="col-height">
+              <el-form-item :label="$t('ZWM')" class="Form_item" prop="chnFirstName">
+                <el-input size="mini"  v-model.trim="form.chnFirstName" clearable placeholder="请填写姓名中的名字，例如建国"></el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="12" class="col-height">
+              <el-form-item :label="$t('firstName')" class="Form_item" prop="firstName">
+                <el-input size="mini"  v-model.trim="form.firstName" :placeholder="$t('enNamePlaceholder')" clearable @keyup.native="form.firstName=form.firstName.toUpperCase()"></el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="12" class="col-height">
+              <el-form-item :label="$t('YWM')" class="Form_item" prop="lastName">
+                <el-input size="mini"  v-model.trim="form.lastName" :placeholder="$t('enNamePlaceholder1')" clearable></el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="12" class="col-height">
+              <el-form-item :label="$t('ZJLX')" class="Form_item" prop="credentialType">
+                <el-select v-model="form.credentialType" clearable class="set-width">
+                  <el-option v-for="item in credential_type" :key="`credentialType${item.value}`" :value="item.value" :label="item.text"></el-option>
+                </el-select>
+              </el-form-item>
+            </el-col>
+            <el-col :span="12" style="position: relative;" class="col-height">
+              <el-form-item :label="$t('ZJH')" class="Form_item" prop="credentialNo">
+                <el-input size="mini" v-model.trim="form.credentialNo" clearable></el-input>
+                <!-- <div style="position: absolute;right:-80px;top:0px;width:80px;cursor: pointer;">
+                  <img class="gantan" src="../../../../assets/images/gantan.png" alt="" @click="appealDialog">
+                  <span class="tip-gantan">证件申诉</span>
+                </div> -->
+              </el-form-item>
+            </el-col>
+            <el-col :span="12" class="col-height">
+              <el-form-item :label="$t('ZJYXQ')" class="Form_item" prop="credentialPeriod">
+                <el-date-picker v-model="form.credentialPeriod" type="date" value-format="yyyy-MM-dd" placeholder="选择日期" style="width: 100%"></el-date-picker>
+              </el-form-item>
+            </el-col>
+            <el-col :span="12" class="col-height">
+              <el-form-item :label="$t('birthday')" class="Form_item" prop="birth">
+                <el-date-picker :disabled="form.credentialType==='CID'" v-model="form.birth" type="date" value-format="yyyy-MM-dd" placeholder="选择日期"
+                  style="width: 100%" :picker-options="{
+                  disabledDate: (date) => {
+                    return form.credentialType!=='CID' ? new Date(date).getTime() > new Date(2002, 5, 30).getTime(): false
+                  }
+                }"></el-date-picker>
+              </el-form-item>
+            </el-col>
+          </el-row>
+        </el-col>
+        <el-col :span="7" :offset="1">
+          <el-form-item label-width="0" class="Form_item" prop="headPicUrl">
+            <!-- <el-upload style="float:left" ref="upload" :show-file-list="false" accept=".jpg," :limit="1"
+            :http-request="uploadHttpDefault" :on-success="uploadSuccess" :action="apis.File_ZyzImageUpload"> -->
+            <div class="imgDiv">
+              <div class="pictureBG">
+                <img :src="returnPicUrl(form.url)" alt="">
+              </div>
+              <div class="pWidth">
+                <p>1、申请人本人近期（6个月内）正面免冠彩色照片；</p>
+                <p>2、照片背景为白色，不得使用其它底色；不得使用艺术照片、翻拍照片；</p>
+                <p>3、照片尺寸为35mm×45mm；像素为413×531，无框；</p>
+                <p>4、图像文件格式为JPG；文件大小100K-300K字节，分辨率不低于300dpi。</p>
+              </div>
+            </div>
+          </el-form-item>
+        </el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="8" class="col-height">
+          <el-form-item :label="$t('XB')" class="Form_item" prop="sex">
+            <el-radio-group v-model="form.sex">
+              <el-radio :disabled="form.credentialType==='CID'" v-for="(item, index) in DROPDOWNBOX.sex" :key="index" :label="item.value">{{item.text}}</el-radio>
+            </el-radio-group>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8" class="col-height">
+          <el-form-item :label="$t('volunteerType')" class="Form_item"  label-width="150px" prop="volunteerType">
+            <el-radio-group v-model="form.volunteerType">
+              <el-radio v-for="(item, index) in DROPDOWNBOX.yes_no_label" :key="index" :label="item.value">{{item.text}}</el-radio>
+            </el-radio-group>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8" class="col-height">
+          <el-form-item :label="$t('blood-type')" class="Form_item" prop="blood">
+            <el-select v-model="form.blood" clearable class="set-width">
+              <el-option v-for="item in DROPDOWNBOX.blood" :key="`blood${item.value}`" :value="item.value" :label="item.text"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8" v-if="form.volunteerType=='Y'" class="col-height">
+          <el-form-item :label="$t('schoolName')" class="Form_item" prop="school">
+            <el-select v-model="form.school" filterable clearable class="set-width">
+              <el-option v-for="item in height_schools" :key="`school${item.value}`" :value="item.value" :label="item.text"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8" v-if="form.volunteerType=='Y'" class="col-height">
+          <el-form-item :label="$t('admission')" class="Form_item" prop="enrollmentDate">
+            <el-date-picker v-model="form.enrollmentDate" type="month" value-format="yyyy-MM" placeholder="选择年月" style="width: 100%"></el-date-picker>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8" class="col-height">
+          <el-form-item :label="$t('ZYZZ')" class="Form_item" prop="organizationId">
+            <el-select v-model="form.organizationId" clearable class="set-width">
+              <el-option v-for="item in organizationList" :key="`organization${item.value}`" :value="item.value" :label="item.text"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8" v-if="form.volunteerType=='Y'" class="col-height">
+          <el-form-item :label="$t('college')" class="Form_item" prop="faculty">
+            <el-select v-model="form.faculty" filterable clearable class="set-width">
+              <el-option v-for="item in DROPDOWNBOX.zyz_faculty" :key="`faculty${item.value}`" :value="item.value" :label="item.text"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8" v-if="form.volunteerType=='Y'" class="col-height">
+          <el-form-item :label="$t('major')" class="Form_item" prop="major">
+            <el-select v-model="form.major" filterable clearable class="set-width">
+              <el-option v-for="item in DROPDOWNBOX.major" :key="`major${item.value}`" :value="item.value" :label="item.text"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8" v-if="form.volunteerType=='Y'" class="col-height">
+          <el-form-item :label="$t('student-Id')" class="Form_item" prop="studentNumber">
+            <el-input size="mini"  v-model.trim="form.studentNumber" clearable></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8" v-if="form.volunteerType=='N'" class="col-height">
+          <el-form-item :label="$t('SZDW')" class="Form_item" prop="company">
+            <el-input size="mini"  v-model.trim="form.company" clearable></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8" v-if="form.volunteerType=='N'" class="col-height">
+          <el-form-item :label="$t('occupation')" class="Form_item" prop="occupation">
+            <el-select v-model="form.occupation" clearable class="set-width">
+              <el-option v-for="item in DROPDOWNBOX.zyz_occupation" :key="`health${item.value}`" :value="item.value" :label="item.text"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8" class="col-height">
+          <el-form-item :label="$t('speciality')" class="Form_item" prop="speciality">
+            <el-select v-model="form.speciality" clearable class="set-width">
+              <el-option v-for="item in DROPDOWNBOX.speciality" :key="`speciality${item.value}`" :value="item.value" :label="item.text"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8" v-if="form.volunteerType=='N'" class="col-height">
+          <el-form-item :label="$t('edu-background')" class="Form_item" prop="heghestEducation">
+            <el-select v-model="form.heghestEducation" clearable class="set-width">
+              <el-option v-for="item in DROPDOWNBOX.education" :key="`health${item.value}`" :value="item.value" :label="item.text"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8" class="col-height">
+          <el-form-item :label="$t('health')" class="Form_item" prop="health">
+            <el-select v-model="form.health" clearable class="set-width">
+              <el-option v-for="item in DROPDOWNBOX.health" :key="`health${item.value}`" :value="item.value" :label="item.text"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8" style="position: relative;" class="col-height">
+          <el-form-item :label="$t('clothSize1')" class="Form_item" prop="clothesSize">
+            <el-select v-model="form.clothesSize" clearable class="set-width">
+              <el-option v-for="item in DROPDOWNBOX.clothes_size" :key="`clothesSize${item.value}`" :value="item.value" :label="item.text"></el-option>
+            </el-select>
+            <!-- <div style="position: absolute;right:-20px;top:0px;width:20px;cursor: pointer;">
+              <img class="size" src="../../../../assets/images/size.png" alt="">
+            </div> -->
+          </el-form-item>
+        </el-col>
+        <el-col :span="8" class="col-height">
+          <el-form-item :label="`${$t('tall')}(CM)`" class="Form_item" prop="height">
+            <el-input size="mini" v-model.trim="form.height" clearable type="number"></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8" class="col-height">
+          <el-form-item :label="`${$t('weight')}(KG)`" class="Form_item" prop="weight">
+            <el-input size="mini"  v-model.trim="form.weight" clearable type="number"></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8" style="position: relative;" class="col-height">
+          <el-form-item :label="$t('shoes')" class="Form_item" prop="shoesSize">
+            <el-select v-model="form.shoesSize" clearable class="set-width">
+              <el-option v-for="item in DROPDOWNBOX.shoes_size" :key="`shoesSize${item.value}`" :value="item.value" :label="item.text"></el-option>
+            </el-select>
+            <!-- <div style="position: absolute;right:-20px;top:0px;width:20px;cursor: pointer;">
+              <img class="size" src="../../../../assets/images/size.png" alt="">
+            </div> -->
+          </el-form-item>
+        </el-col>
+        <el-col :span="8" style="position: relative;" class="col-height">
+          <el-form-item :label="$t('trouserSize')" class="Form_item" prop="trouserSize">
+            <el-select v-model="form.trouserSize" clearable class="set-width">
+              <el-option v-for="item in DROPDOWNBOX.trouser_size" :key="`trouserSize${item.value}`" :value="item.value" :label="item.text"></el-option>
+            </el-select>
+            <!-- <div style="position: absolute;right:-20px;top:0px;width:20px;cursor: pointer;">
+              <img class="size" src="../../../../assets/images/size.png" alt="" @click="trousersDialog">
+            </div> -->
+          </el-form-item>
+        </el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="12" class="col-height">
+          <el-form-item :label="$t('disabilityFlag')" class="Form_item" label-width="120px" prop="disabilityFlag">
+            <el-radio-group v-model="form.disabilityFlag">
+              <el-radio v-for="(item, index) in DROPDOWNBOX.yes_no_label" :key="index" :label="item.value">{{item.text}}</el-radio>
+            </el-radio-group>
+          </el-form-item>
+        </el-col>
+      </el-row>
+      <el-row v-if="form.disabilityFlag === 'Y'">
+        <el-col :span="24">
+          <el-form-item class="Form_item" label-width="100px" prop="disabilityType">
+            <el-checkbox-group v-model="form.disabilityType">
+              <el-checkbox v-for="(item, index) in DROPDOWNBOX.zyz_disability_type" :key="index" :label="item.value">{{item.text}}</el-checkbox>
+            </el-checkbox-group>
+          </el-form-item>
+        </el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="8" class="col-height">
+          <el-form-item :label="$t('politicalStatus')" class="Form_item" prop="politicalOutlook">
+            <el-select v-model="form.politicalOutlook" clearable class="set-width">
+              <el-option v-for="item in DROPDOWNBOX.political_outlook" :key="`politicalOutlook${item.value}`" :value="item.value" :label="item.text"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8" class="col-height">
+          <el-form-item :label="$t('Nation')" class="Form_item" prop="nation">
+            <el-select v-model="form.nation" clearable class="set-width">
+              <el-option v-for="item in DROPDOWNBOX.nation" :key="`nation${item.value}`" :value="item.value" :label="item.text"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="8">
+          <el-form-item :label="$t('YFPGW')" class="Form_item">
+            <el-select v-model="form.postCode" clearable style="width: 100%" disabled>
+              <el-option v-for="item in DROPDOWNBOX.zyz_post" :key="item.value" :value="item.value" :label="item.text"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8">
+          <el-form-item :label="$t('XQDW')" class="Form_item">
+            <el-select v-model="form.unit" clearable style="width: 100%" disabled>
+              <el-option v-for="item in units" :key="item.value" :value="item.value" :label="item.text"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+        <!-- <el-col :span="24">
+          <el-form-item :label="$t('expect-post')" class="Form_item" prop="volExperienceOption">
+            <span class="span-con">最多可选4项</span>
+            <el-checkbox-group v-model="form.volExperienceOption" :max="4">
+              <el-checkbox-button v-for="(item, index) in DROPDOWNBOX.zyz_service_position" :key="index" :label="item.value">{{item.text}}</el-checkbox-button>
+            </el-checkbox-group>
+            </el-form-item>
+        </el-col> -->
+      </el-row>
+      <div class="title">②联系信息</div>
+      <el-row>
+        <el-col :span="8">
+          <el-form-item :label="$t('XJZSE')" class="Form_item" prop="domicileProvince">
+            <el-select v-model="form.domicileProvince" clearable class="set-width" @change="changedomicileProvince">
+              <el-option v-for="item in province" :key="`domicileProvince${item.provinceCode}`" :value="item.provinceCode" :label="item.provinceName"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8">
+          <el-form-item :label="$t('XJZSI')" class="Form_item" prop="domicileCity">
+            <el-select v-model="form.domicileCity" clearable class="set-width" @change="changeDomicileCity">
+              <el-option v-for="item in domicileCity" :key="`domicileCity${item.cityCode}`" :value="item.cityCode" :label="item.cityName"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8">
+          <el-form-item :label="$t('XJZQ')" class="Form_item">
+            <el-select v-model="form.domicileArea" clearable class="set-width">
+              <el-option v-for="item in domicileArea" :key="`domicileArea${item.areaCode}`" :value="item.areaCode" :label="item.areaName"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="24">
+          <el-form-item :label="$t('XJZXXDZ')" class="Form_item" prop="domicileAddress">
+            <el-input size="mini"  v-model.trim="form.domicileAddress" clearable></el-input>
+          </el-form-item>
+        </el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="8">
+          <el-form-item :label="$t('HJSE')" class="Form_item" prop="censusProvince">
+            <el-select v-model="form.censusProvince" clearable class="set-width" @change="changeCensusProvince">
+              <el-option v-for="item in province" :key="`censusProvince${item.provinceCode}`" :value="item.provinceCode" :label="item.provinceName"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8">
+          <el-form-item :label="$t('HJSI')" class="Form_item" prop="censusCity">
+            <el-select v-model="form.censusCity" clearable class="set-width" @change="changeCensusCity">
+              <el-option v-for="item in censusCity" :key="`censusCity${item.cityCode}`" :value="item.cityCode" :label="item.cityName"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8">
+          <el-form-item :label="$t('HJQ')" class="Form_item">
+            <el-select v-model="form.censusArea" clearable class="set-width">
+              <el-option v-for="item in censusArea" :key="`censusArea${item.areaCode}`" :value="item.areaCode" :label="item.areaName"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="24">
+          <el-form-item :label="$t('HJXXDZ')" class="Form_item" prop="censusAddress">
+            <el-input size="mini"  v-model.trim="form.censusAddress" clearable placeholder="填写内容必须与户籍所在地址一致！"></el-input>
+          </el-form-item>
+        </el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="8">
+          <el-form-item :label="$t('QQ')" class="Form_item" prop="qq">
+            <el-input size="mini"  v-model.trim="form.qq" clearable></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8">
+          <el-form-item :label="$t('wechat')" class="Form_item" prop="wechat">
+            <el-input size="mini"  v-model.trim="form.wechat" clearable></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8">
+          <el-form-item :label="$t('mail')" class="Form_item" prop="email">
+            <el-input size="mini"  v-model.trim="form.email" clearable></el-input>
+          </el-form-item>
+        </el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="8">
+          <el-form-item :label="$t('emergency-contacter')" class="Form_item" prop="emergencyContact">
+            <el-input size="mini"  v-model.trim="form.emergencyContact" clearable></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8">
+          <el-form-item :label="$t('emergency-contact')" class="Form_item" prop="emergencyContactPhone">
+            <el-input size="mini"  v-model.trim="form.emergencyContactPhone" clearable @blur="differentMoible"></el-input>
+          </el-form-item>
+        </el-col>
+      </el-row>
+      <div class="title">③技能信息</div>
+      <el-row>
+        <el-col :span="8">
+          <el-form-item :label="$t('Language')" class="Form_item" prop="foreignLanguage">
+            <el-select v-model="form.foreignLanguage" clearable class="set-width">
+              <el-option v-for="item in DROPDOWNBOX.foreign_language" :key="item.value" :value="item.value" :label="item.text"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8">
+          <el-form-item :label="$t('langLevel')" class="Form_item" prop="languageLevel">
+            <el-select v-model="form.languageLevel" clearable class="set-width">
+              <el-option v-for="item in DROPDOWNBOX.language_level" :key="item.value" :value="item.value" :label="item.text"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8">
+          <el-form-item :label="$t('chineseLevel')" class="Form_item" prop="chineseLevel">
+            <el-select v-model="form.chineseLevel" clearable class="set-width">
+              <el-option v-for="item in DROPDOWNBOX.chinese_level" :key="item.value" :value="item.value" :label="item.text"></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="8">
+          <el-form-item :label="$t('volunteerExp')" class="Form_item" prop="experienceFlag">
+            <el-radio-group v-model="form.experienceFlag">
+              <el-radio :label="'1'">{{$t('yes')}}</el-radio>
+              <el-radio :label="'0'">{{$t('no')}}</el-radio>
+            </el-radio-group>
+          </el-form-item>
+        </el-col>
+      </el-row>
+      <el-row v-show="form.experienceFlag === '1'">
+        <el-col :span="8">
+          <el-form-item class="Form_item">
+            <span>参与日期</span>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8">
+          <el-form-item class="Form_item">
+            <span>赛会活动</span>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8">
+          <el-form-item class="Form_item">
+            <span>服务岗位</span>
+          </el-form-item>
+        </el-col>
+      </el-row>
+      <div v-show="form.experienceFlag === '1'">
+        <el-row v-for="(item, index) in form.experience" :key="index">
+          <el-col :span="8">
+            <el-form-item class="Form_item" label-width="30px">
+              <el-date-picker v-model="item.date" type="date" value-format="yyyy-MM-dd" placeholder="选择日期" style="width: 100%"></el-date-picker>
+            </el-form-item>
+          </el-col>
+          <el-col :span="8">
+            <el-form-item class="Form_item" label-width="30px">
+              <el-input size="mini"  v-model.trim="item.activity" clearable></el-input>
+            </el-form-item>
+          </el-col>
+          <el-col :span="8">
+            <el-form-item class="Form_item" label-width="30px">
+              <el-input size="mini"  v-model.trim="item.servicePost" clearable></el-input>
+            </el-form-item>
+          </el-col>
+          <!-- <el-col :span="1">
+            <el-form-item class="Form_item" label-width="10px">
+              <img class="img_item" src="../../../../assets/images/add.png" alt="" @click="addLine"
+                v-show="form.volunteerStatus === '' || form.volunteerStatus === 'VS99' || form.volunteerStatus === 'VS07' || ifMistake === 'youwu'">
+            </el-form-item>
+          </el-col>
+          <el-col :span="1" v-if="index!=0">
+            <el-form-item class="Form_item" label-width="10px">
+              <img class="img_item" src="../../../../assets/images/reduce.png" alt="" @click="reduceLine(index)"
+                v-show="form.volunteerStatus === '' || form.volunteerStatus === 'VS99' || form.volunteerStatus === 'VS07' || ifMistake === 'youwu'">
+            </el-form-item>
+          </el-col> -->
+        </el-row>
+      </div>
+    </el-form>
+  </div>
+</template>
+<script>
+import mixin from '@/mixins/index'
+// import dixtMixin from '@/mixins/dictMixin'
+import apis from '@/apis'
 
-export { render, staticRenderFns }
+export default {
+  mixins: [mixin],
+  props: {
+    //TODO form改data里面，采用方法赋值和取值，提升性能(安林娜)
+    ifMistake: {
+      required: false,
+      type: String,
+      default: '',
+    },
+  },
+  data() {
+    return {
+      country: [],
+      height_schools: [],
+      form: {}, // 外部传进来的表单
+      province: [],
+      domicileCity: [],
+      domicileArea: [],
+      censusCity: [],
+      censusArea: [],
+      units: [],
+      organizationList: [], // 志愿组织列表
+    }
+  },
+  created() {
+    this.getCountry()
+    this.getHeightSchool()
+    this.getUnits()
+    // 获取省
+    this.$http.post(apis.OptionConfig_GetProvince).then((res) => {
+      if (res.data.code === 200) {
+        this.province = res.data.data
+      }
+    })
+    this.getOrganizationList()
+  },
+  computed: {
+    credential_type() {
+      let DrowList = []
+      if (this.form.nationality === 'CHN') { // 如果国家/地区是中国，只能选择身份证
+        DrowList = this.DROPDOWNBOX.credential_type.filter(items => items.value === 'CID')
+      } else if (this.form.nationality === 'TPE') { // 国家/地区是中国台北、只能选择台湾居民来往大陆通行证
+        DrowList = this.DROPDOWNBOX.credential_type.filter(items => items.value === 'TWT')
+      } else if (this.form.nationality === 'HKG' || this.form.nationality === 'MAC') { // 国家/地区是中国澳门、中国香港，只能选择港澳居民来往内地通行证
+        DrowList = this.DROPDOWNBOX.credential_type.filter(items => items.value === 'GAT')
+      } else { // 国家/地区除了以上的，只能选择护照了
+        DrowList = this.DROPDOWNBOX.credential_type.filter(items => items.value === 'PAS')
+      }
+      return DrowList
+    },
+  },
+  methods: {
+    /**
+     * @description: 获取组织列表
+     * @param {*}
+     * @return {*}
+     */
+    getOrganizationList() {
+      this.$http.post(apis.OptionConfig_OrganizationList).then((res) => {
+        if (res.data.code === 200) {
+          this.organizationList = res.data.data
+        }
+      })
+    },
+    /**
+     * @function 设置表单变量的值
+     */
+    setFormData(value) {
+      this.form = value
+    },
+    /**
+     * @function 获取表单变量的值
+     */
+    getFormData() {
+      return this.form
+    },
+    getCountry() {
+      this.$http.post(apis.OptionConfig_GetCountry).then((res) => {
+        if (res.data.code === 200) {
+          this.country = res.data.data
+        }
+      })
+    },
+    getHeightSchool() {
+      this.$http.post(apis.OptionConfig_GetAllColleges, { groupNo: 'ZYZ_SCHOOL' }).then((res) => {
+        if (res.data.code === 200) {
+          this.height_schools = res.data.data
+        }
+      })
+    },
+    // 获取使用单位下拉框
+    getUnits() {
+      this.$http.post(apis.OptionConfig_GetAllUnit).then((res) => {
+        if (res.data.code === 200) {
+          this.units = res.data.data
+        }
+      })
+    },
+    /**
+     * @function 封装先居住地调用省市区顺序的方法
+     */
+    getDomicile(res) {
+      return new Promise((resolve) => {
+        this.changedomicileProvince(res.domicileProvince).then(() => {
+          this.form.domicileCity = res.domicileCity
+          this.changeDomicileCity(res.domicileCity).then(() => {
+            this.form.domicileArea = res.domicileArea
+            this.$nextTick(() => {
+              resolve()
+            })
+          })
+        })
+      })
+    },
+    /**
+     * @function 封装先居住地调用省市区顺序的方法
+     */
+    getCensus(res) {
+      return new Promise((resolve) => {
+        this.changeCensusProvince(res.censusProvince).then(() => {
+          this.form.censusCity = res.censusCity
+          this.changeCensusCity(res.censusCity).then(() => {
+            this.form.censusArea = res.censusArea
+            this.$nextTick(() => {
+              resolve()
+            })
+          })
+        })
+      })
+    },
+    /**
+     * @function 改变现居住省带出现居住市的下拉框
+     */
+    changedomicileProvince(val) {
+      return new Promise((resolve) => {
+        this.form.domicileCity = ''
+        this.domicileCity = []
+        this.form.domicileArea = ''
+        this.domicileArea = []
+        this.$http.post(apis.OptionConfig_GetCity, { code: val }).then((res) => {
+          if (res.data.code === 200) {
+            this.domicileCity = res.data.data
+            this.$nextTick(() => {
+              resolve()
+            })
+          }
+        })
+      })
+    },
+    /**
+     * @function 改变现居住市带出现居住区的下拉框
+     */
+    changeDomicileCity(val) {
+      return new Promise((resolve) => {
+        this.form.domicileArea = ''
+        this.domicileArea = []
+        this.$http.post(apis.OptionConfig_GetArea, { code: val }).then((res) => {
+          if (res.data.code === 200) {
+            this.domicileArea = res.data.data
+            this.$nextTick(() => {
+              resolve()
+            })
+          }
+        })
+      })
+    },
+    /**
+     * @function 改变户籍省带出户籍市的下拉框
+     */
+    changeCensusProvince(val) {
+      return new Promise((resolve) => {
+        this.form.censusCity = ''
+        this.censusCity = []
+        this.form.censusArea = ''
+        this.censusArea = []
+        this.$http.post(apis.OptionConfig_GetCity, { code: val }).then((res) => {
+          if (res.data.code === 200) {
+            this.censusCity = res.data.data
+            this.$nextTick(() => {
+              resolve()
+            })
+          }
+        })
+      })
+    },
+    /**
+     * @function 改变户籍市带出户籍区的下拉框
+     */
+    changeCensusCity(val) {
+      return new Promise((resolve) => {
+        this.form.censusArea = ''
+        this.censusArea = []
+        this.$http.post(apis.OptionConfig_GetArea, { code: val }).then((res) => {
+          if (res.data.code === 200) {
+            this.censusArea = res.data.data
+            this.$nextTick(() => {
+              resolve()
+            })
+          }
+        })
+      })
+    },
+    /**
+     * @function 紧急联系人电话不能与注册的手机号一致！
+     */
+    differentMoible() {
+      if (this.form.emergencyContactPhone === this.form.mobile && this.form.emergencyContactPhone !== '') {
+        this.$message.error('紧急联系人电话不能与注册的手机号一致！')
+      }
+    },
+  },
+}
+</script>
+<style lang="less" scoped>
+// @import "../../../../assets/styles/mixin.scoped.less";
+.step-four {
+  .col-height {
+    height: 63px;
+  }
+  .imgDiv {
+    display: flex;
+  }
+  .pWidth {
+    width: 290px;
+  }
+  .pictureBG {
+    // background: url('../../../../assets/images/avatar.png') no-repeat;
+    background-size: 100% 100%;
+    // background: url(../../../../assets/images/avatar.png);
+    width: 130px;
+    height: 168px;
+    img {
+      width: 130px;
+      height: 168px;
+    }
+  }
+}
+</style>
+<style lang="less">
+.step-four {
+  padding-left: 10px;
+  .set-width {
+    width: 100%;
+  }
+  .title-container {
+    width: 100%;
+    // text-align: center;
+    .title_style {
+      width:90px;
+      height:27px;
+      font-size:18px;
+      font-family:SourceHanSansSC-Medium,SourceHanSansSC;
+      font-weight:500;
+      color:rgba(36,45,65,1);
+      line-height:27px;
+      margin-left: 45%;
+    }
+  }
+  .title {
+    height:24px;
+    font-size:16px;
+    font-family:SourceHanSansSC-Medium,SourceHanSansSC;
+    font-weight:500;
+    color:rgba(62,103,174,1);
+    line-height:24px;
+    margin: 20px 0 10px;
+  }
+  .form-container {
+    .el-checkbox-button:first-child .el-checkbox-button__inner {
+      border-left: 1px solid rgba(194,198,202,1);
+    }
+    .el-checkbox-button__inner {
+      border-left: 1px solid #DCDFE6;
+    }
+    .el-checkbox-button.is-checked .el-checkbox-button__inner {
+      box-shadow: 0 0 0 0;
+    }
+    .el-checkbox-button.is-focus .el-checkbox-button__inner {
+      border-color: rgba(194,198,202,1);
+    }
+    .el-checkbox-button__inner {
+      background: rgba(255,255,255,1);
+      border-radius: 4px;
+      border: 1px solid rgba(194,198,202,1);
+      font-size: 14px;
+      font-family: SourceHanSansSC-Regular,SourceHanSansSC;
+      font-weight: 400;
+      color: rgb(40, 134, 220);
+    }
+    img {
+      width: 130px;
+      height: 168px;
+      float: left;
+    }
+    p {
+      font-size:12px;
+      font-family:SourceHanSansSC-Regular,SourceHanSansSC;
+      font-weight:400;
+      color:rgba(148,152,158,1);
+      padding: 4px;
+      letter-spacing:2px;
+      line-height:17px;
+    }
+    .span-con {
+      font-size:14px;
+      color:rgba(148,152,158,1);
+    }
+    .el-checkbox-button .el-checkbox-button__inner {
+      margin: 12px;
+      width: 140px;
+      height: 36px;
+    }
+    .el-input--suffix .el-input__inner {
+      height: 36px;
+    }
+    .el-checkbox-button.is-checked .el-checkbox-button__inner {
+      background-color: rgb(40, 134, 220);
+      border-color: rgb(40, 134, 220);
+    }
+    .el-checkbox-button.is-disabled:first-child .el-checkbox-button__inner {
+      border-left-color: #EBEEF5 !important;
+    }
+    .size {
+      width: 16px;
+      height: 16px;
+      margin-top: 13px;
+      margin-left: 10px;
+    }
+    .gantan {
+      width: 14px;
+      height: 14px;
+      margin: 12px 5px 0 5px;
+      float: left;
+    }
+    .tip-gantan {
+      display: block;
+      height: 60px;
+      font-size: 14px;
+      font-family: SourceHanSansSC-Medium,SourceHanSansSC;
+      font-weight: 500;
+      color: rgba(174,67,62,1);
+      line-height: 34px;
+      margin-left: 2px;
+      margin-top: 2px;
+    }
+  }
+  .button-container {
+    width: 100%;
+    // text-align: center;
+    .btn {
+      margin: 10px;
+      background: rgb(40, 134, 220);
+      color:rgba(255,255,255,1);
+      font-family:SourceHanSansSC-Regular,SourceHanSansSC;
+      font-weight:400;
+      width: 160px;
+      height: 32px;
+      line-height: 7px;
+    }
+  }
+  .refer-style {
+    height: 18px;
+    padding: 0;
+    margin-left: 100px;
+    color: rgb(40, 134, 220);
+    border: none;
+    background: var(--main-bg-color);
+  }
+}
+</style>

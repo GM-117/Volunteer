@@ -360,7 +360,7 @@ class searchFrom extends pageClass {
 					message: '学历不可为空',
 					trigger: 'change',
 				},
-	    ]
+      ]
       // this.volExperienceOption = [
       //   {
 			// 		required: true,

@@ -18,7 +18,7 @@
           :key="item.id"
           v-if="item.children.length > 0 && item.isScreen === 'Y'">
           <template slot="title">
-            <img :src="item.iconPath" style="width: 20px; margin-right: 7px;">
+            <img src="../assets/images/personalMana.png" style="width: 20px; margin-right: 7px;">
             <span style="color: #fff;">{{item.name}}</span>
           </template>
           <template v-for="children_item in item.children">
@@ -36,18 +36,86 @@
 
 <script>
 export default {
+  data(){
+    return{
+      data: [
+        {
+          url: '/personalMana',
+          id: '1',
+          name: '志愿者个人管理',
+          isScreen: 'Y',
+          children:[{
+            url: 'application',
+            id: '1-1',
+            isScreen: 'Y',
+            name: '我的报名'
+          },
+          {
+            url: 'job',
+            id: '1-2',
+            isScreen: 'Y',
+            name: '我的岗位'
+          },
+          {
+            url: 'certificate',
+            id: '1-3',
+            isScreen: 'Y',
+            name: '我的证书'
+          },
+          {
+            url: 'allege',
+            id: '1-4',
+            isScreen: 'Y',
+            name: '证件申诉'
+          }],
+        },
+      ]
+    }
+  },
   props: {
-    data: {
-      type: Array,
-      required: true,
-      default: () => ([]),
-    },
+    // data: {
+    //   type: Array,
+    //   required: true,
+    //   default: () => ([
+    //     {
+    //       url: '/personalMana',
+    //       id: '1',
+    //       name: '志愿者个人管理',
+    //       isScreen: 'Y',
+    //       iconPath: '@/assets/images/personalMana.png',
+    //       children:[{
+    //         url: 'application',
+    //         id: '1-1',
+    //         isScreen: 'Y',
+    //         name: '我的报名'
+    //       },
+    //       {
+    //         url: 'job',
+    //         id: '1-1',
+    //         isScreen: 'Y',
+    //         name: '我的岗位'
+    //       },
+    //       {
+    //         url: 'certificate',
+    //         id: '1-1',
+    //         isScreen: 'Y',
+    //         name: '我的证书'
+    //       },
+    //       {
+    //         url: 'allege',
+    //         id: '1-1',
+    //         isScreen: 'Y',
+    //         name: '证件申诉'
+    //       }],
+    //     },
+    //   ]),
+    // },
     collapse: {
       type: Boolean,
       required: true,
       default: () => (false),
     },
-  },
+  }
 }
 </script>
 

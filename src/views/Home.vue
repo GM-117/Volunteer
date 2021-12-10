@@ -8,7 +8,6 @@
         <h3 class="title" v-show="!collapse">志愿者管理系统</h3>
       </div>
       <aside-menu
-        :data="authority"
         :collapse="collapse"></aside-menu>
       <i :class="['asideCollapse', collapse ? 'el-icon-arrow-right' : 'el-icon-arrow-left']" @click="collapse=!collapse"></i>
     </el-aside>

@@ -708,7 +708,7 @@ export default {
     width: 290px;
   }
   .pictureBG {
-    // background: url('../../../../assets/images/avatar.png') no-repeat;
+    background: url('../../../../assets/images/avatar.png') no-repeat;
     background-size: 100% 100%;
     // background: url(../../../../assets/images/avatar.png);
     width: 130px;

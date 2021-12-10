@@ -240,15 +240,15 @@
         </div>
         <div class="fileDown">{{ $t("文档下载") }}</div>
         <div class="noFile" v-if="IS_RENDER">
-          <!-- <div
+          <div
             class="file-li"
             v-for="(item, index) in noticeForm.noticeManageFiles"
             :key="index"
+          >
+          <!-- <div
+            class="file-li"
+            :key="index"
           > -->
-          <div
-            class="file-li"
-            :key="index"
-          >
             <img
               src="../../assets/images/file.png"
               class="image-style"
@@ -257,78 +257,17 @@
             <el-tooltip
               class="item"
               effect="dark"
-              content="马拉松报名-PC_2021-05-14T20_56_42 (1).pdf"
+              :content="item.fileName"
               placement="top-start"
             >
               <div
                 class="file-style blue-color"
                 @click="
-                  exportFunc(apis.File_Download, {
-                    fileDirectory: item.filePath,
-                    fileName: item.fileName,
-                  })
+                  openDownload(item.fileName)
                 "
               >
-                <!-- {{ item.fileName }} -->
-                马拉松报名-PC_2021-05-14T20_56_42 (1).pdf
-              </div>
-            </el-tooltip>
-          </div>
-          <div
-            class="file-li"
-            :key="index"
-          >
-            <img
-              src="../../assets/images/file.png"
-              class="image-style"
-              alt=""
-            />
-            <el-tooltip
-              class="item"
-              effect="dark"
-              content="新闻报送导出20210531152246 (1).docx"
-              placement="top-start"
-            >
-              <div
-                class="file-style blue-color"
-                @click="
-                  exportFunc(apis.File_Download, {
-                    fileDirectory: item.filePath,
-                    fileName: item.fileName,
-                  })
-                "
-              >
-                <!-- {{ item.fileName }} -->
-                新闻报送导出20210531152246 (1).docx
-              </div>
-            </el-tooltip>
-          </div>
-          <div
-            class="file-li"
-            :key="index"
-          >
-            <img
-              src="../../assets/images/file.png"
-              class="image-style"
-              alt=""
-            />
-            <el-tooltip
-              class="item"
-              effect="dark"
-              content="社会志愿者导入模板(2).xlsx"
-              placement="top-start"
-            >
-              <div
-                class="file-style blue-color"
-                @click="
-                  exportFunc(apis.File_Download, {
-                    fileDirectory: item.filePath,
-                    fileName: item.fileName,
-                  })
-                "
-              >
-                <!-- {{ item.fileName }} -->
-                社会志愿者导入模板(2).xlsx
+                {{ item.fileName }}
+                <!-- 马拉松报名-PC_2021-05-14T20_56_42 (1).pdf -->
               </div>
             </el-tooltip>
           </div>
@@ -426,7 +365,20 @@ export default {
       sliderVerifyCode: "",
       noticeForm: {
         content: "",
-        noticeManageFiles: "",
+        noticeManageFiles: [
+          {
+            filePath: 'public/马拉松报名-PC_2021-05-14T20_56_42+(1).pdf',
+            fileName: '马拉松报名-PC_2021-05-14T20_56_42+(1).pdf'
+          },
+          {
+            filePath: 'public/新闻报送导出20210531152246+(1).docx',
+            fileName: '新闻报送导出20210531152246+(1).docx'
+          },
+          {
+            filePath: 'public/社会志愿者导入模板(2).xlsx',
+            fileName: '社会志愿者导入模板(2).xlsx'
+          }
+        ],
       },
     };
   },
@@ -732,6 +684,9 @@ export default {
         path: "/organizationLogin",
       });
     },
+    openDownload(filePath){
+      window.open(filePath)
+    }
   },
 };
 </script>

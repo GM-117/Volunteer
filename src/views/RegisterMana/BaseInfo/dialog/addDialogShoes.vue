@@ -13,10 +13,9 @@
       @open="openDialog"
       :before-close="closeDialog"
       :close-on-click-modal="false"
-      :title="$t('shoeSize')"
+      title="鞋子尺码"
       >
-      <img v-if="Config.pcShoesPicUrl" :src="returnPicUrl(Config.pcShoesPicUrl)" alt="" style="width: 100%; height: 100%;">
-      <div v-else style="height: 200px;line-height: 200px;text-align: center;font-size: 24px;">暂无数据</div>
+      <img src="../../../../assets/images/shoes.jpeg" alt="" style="width: 100%; height: 100%;">
     </el-dialog>
   </div>
 </template>

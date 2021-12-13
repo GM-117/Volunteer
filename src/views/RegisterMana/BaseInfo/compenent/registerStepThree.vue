@@ -7,21 +7,21 @@
         <el-col :span="6">
           <el-form-item :label="$t('外语语种')" class="Form_item" prop="foreignLanguage">
             <el-select v-model="form.foreignLanguage" clearable class="set-width">
-              <el-option v-for="item in DROPDOWNBOX.foreign_language" :key="item.value" :value="item.value" :label="item.text"></el-option>
+              <el-option v-for="item in json.foreign_language" :key="item.value" :value="item.value" :label="item.text"></el-option>
             </el-select>
           </el-form-item>
         </el-col>
         <el-col :span="6" :offset="1">
           <el-form-item :label="$t('外语等级')" class="Form_item" prop="languageLevel">
             <el-select v-model="form.languageLevel" clearable class="set-width">
-              <el-option v-for="item in DROPDOWNBOX.language_level" :key="item.value" :value="item.value" :label="item.text"></el-option>
+              <el-option v-for="item in json.language_level" :key="item.value" :value="item.value" :label="item.text"></el-option>
             </el-select>
           </el-form-item>
         </el-col>
         <el-col :span="6" :offset="1">
           <el-form-item :label="$t('中文水平')" class="Form_item" prop="chineseLevel">
             <el-select v-model="form.chineseLevel" clearable class="set-width">
-              <el-option v-for="item in DROPDOWNBOX.chinese_level" :key="item.value" :value="item.value" :label="item.text"></el-option>
+              <el-option v-for="item in json.chinese_level" :key="item.value" :value="item.value" :label="item.text"></el-option>
             </el-select>
           </el-form-item>
         </el-col>
@@ -91,6 +91,7 @@
 import mixin from '@/mixins/index'
 // import dixtMixin from '@/mixins/dictMixin'
 // import apis from '@/apis'
+import json from './data'
 
 const defaultData = {
   id: '',
@@ -101,6 +102,7 @@ const defaultData = {
 }
 export default {
   mixins: [mixin],
+  
   props: {
     //TODO form改data里面，采用方法赋值和取值，提升性能(安林娜)
     // form: {
@@ -128,7 +130,18 @@ export default {
     return {
       model: Object.assign({}, defaultData),
       sportList: [],
-      form: {},
+      form: {
+        experience:[
+        
+        {
+          date: '',
+          activity: '',
+          servicePost: '',
+          volunteerId: '',
+        },
+      ]
+      },
+      json,
       // form: new UserSearchClass('form'), // 实例化一个表单的变量
       // rules: new UserSearchClass('rule'), // 实例化一个表单的规则
     }

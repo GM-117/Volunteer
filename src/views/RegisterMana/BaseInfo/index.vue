@@ -67,9 +67,9 @@ export default {
   mixins: [mixin, dialogMixin],
   data() {
     return {
-      form: new UserSearchClass('form'), // 实例化一个表单的变量
+      form: new UserSearchClass('form',this.form), // 实例化一个表单的变量
       rules: new UserSearchClass('rule', this), // 实例化一个表单的规则
-      show: '4',
+      show: '3',
       ifMistake: '',
       confirmDialog: {
         visible: false,
@@ -82,7 +82,7 @@ export default {
     if (!this.$route.query.id) {
       this.getQuery()
     } else {
-      this.isId = true
+      // this.isId = true
       this.getQueryById()
     }
   },

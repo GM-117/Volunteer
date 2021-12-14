@@ -9,12 +9,18 @@
       <div class="dialog-wrap">
         <!-- 删除弹窗提示文字与图标 -->
         <i class="delIcon"><img :src="(type === 4 || type === 5 || type === 6 || type === 7 || type === 8) ? require('../assets/images/tips.png') : require('../assets/images/del.png')" alt=""></i>
-        <p>{{$t(`confirmDialog_type${type}`)}}</p>
+        <!-- <p>{{$t(`confirmDialog_type${type}`)}}</p> -->
+        <p>是否进行保存？</p>
       </div>
       <template slot="footer">
         <!-- 如果没特别需求，统一使用mixin里面的关闭方法 -->
+<<<<<<< HEAD
         <el-button @click="sureEvent" type="primary">是</el-button>
         <el-button @click="closeDialog" type="info">否</el-button>
+=======
+        <el-button @click="sureEvent" type="primary">{{$t('是')}}</el-button>
+        <el-button @click="closeDialog" type="info">{{$t('否')}}</el-button>
+>>>>>>> master
       </template>
     </el-dialog>
   </div>

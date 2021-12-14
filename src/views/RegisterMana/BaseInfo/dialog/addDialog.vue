@@ -13,11 +13,7 @@
       @open="openDialog"
       :before-close="closeDialog"
       :close-on-click-modal="false"
-<<<<<<< HEAD
       title="服装尺码"
-=======
-      :title="$t('服装尺码')"
->>>>>>> master
       >
       <img src="../../../../assets/images/size.jpeg" alt=""  style="width: 100%; height: 100%;">
     </el-dialog>

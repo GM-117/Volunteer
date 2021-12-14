@@ -6,24 +6,14 @@
           <el-col :span="16">
             <el-row>
               <el-col :span="12" class="col-height">
-<<<<<<< HEAD
                 <el-form-item label="申请类型" class="Form_item" prop="applyType">
                   <el-radio-group v-model="form.applyType">
                     <el-radio v-for="(item, index) in json.zyz_apply_type" :key="index" :label="item.value">{{item.text}}</el-radio>
-=======
-                <el-form-item :label="$t('申请类型')" class="Form_item" prop="applyType">
-                  <el-radio-group v-model="form.applyType">
-                    <el-radio v-for="(item, index) in  applyType" :key="index" :label="item.value">{{item.text}}</el-radio>
->>>>>>> master
                   </el-radio-group>
                 </el-form-item>
               </el-col>
               <el-col :span="12" class="col-height">
-<<<<<<< HEAD
                 <el-form-item label="国家/地区" class="Form_item" prop="nationality">
-=======
-                <el-form-item :label="$t('国家/地区')" class="Form_item" prop="nationality">
->>>>>>> master
                   <el-select v-model="form.nationality" filterable clearable class="set-width" @change="changeNationality">
                     <el-option v-for="item in country" :key="`nationality${item.countryCode}`" :value="item.countryCode" :label="item.countryName"></el-option>
                   </el-select>
@@ -50,27 +40,18 @@
                 </el-popover>
               </div>
               <el-col :span="12" class="col-height">
-<<<<<<< HEAD
                 <el-form-item label="中文姓" class="Form_item" prop="chnLastName"
-=======
-                <el-form-item :label="$t('中文姓')" class="Form_item" prop="chnLastName"
->>>>>>> master
                   :rules="form.nationality==='CHN' || form.nationality==='HKG' ||form.nationality==='MAC' || form.nationality==='TPE'?rules.chnLastName:[{required: false}]">
                   <el-input size="mini"  v-model.trim="form.chnLastName" clearable placeholder="请填写姓名中的姓氏，例如张"></el-input>
                 </el-form-item>
               </el-col>
               <el-col :span="12" class="col-height">
-<<<<<<< HEAD
                 <el-form-item label="中文名" class="Form_item" prop="chnFirstName"
-=======
-                <el-form-item :label="$t('中文名')" class="Form_item" prop="chnFirstName"
->>>>>>> master
                   :rules="form.nationality==='CHN' || form.nationality==='HKG' ||form.nationality==='MAC' || form.nationality==='TPE'?rules.chnFirstName:[{required: false}]">
                   <el-input size="mini"  v-model.trim="form.chnFirstName" clearable placeholder="请填写姓名中的名字，例如建国"></el-input>
                 </el-form-item>
               </el-col>
               <el-col :span="12" class="col-height">
-<<<<<<< HEAD
                 <el-form-item label="英文姓" class="Form_item" prop="firstName">
                   <el-input size="mini"  v-model.trim="form.firstName" placeholder="中国内地填写汉语拼音，例如ZHANG" clearable @keyup.native="form.firstName=form.firstName.toUpperCase()"></el-input>
                 </el-form-item>
@@ -78,15 +59,6 @@
               <el-col :span="12" class="col-height">
                 <el-form-item label="英文名" class="Form_item" prop="lastName">
                   <el-input size="mini"  v-model.trim="form.lastName" placeholder="中国内地填写汉语拼音,例如JIANGUO" clearable @keyup.native="form.lastName=form.lastName.toUpperCase()"></el-input>
-=======
-                <el-form-item :label="$t('英文姓')" class="Form_item" prop="firstName">
-                  <el-input size="mini"  v-model.trim="form.firstName" :placeholder="$t('中国内地填写汉语拼音，例如ZHANG')" clearable @keyup.native="form.firstName=form.firstName.toUpperCase()"></el-input>
-                </el-form-item>
-              </el-col>
-              <el-col :span="12" class="col-height">
-                <el-form-item :label="$t('英文名')" class="Form_item" prop="lastName">
-                  <el-input size="mini"  v-model.trim="form.lastName" :placeholder="$t('中国内地填写汉语拼音，例如JIANGUO')" clearable @keyup.native="form.lastName=form.lastName.toUpperCase()"></el-input>
->>>>>>> master
                 </el-form-item>
               </el-col>
             </el-row>
@@ -112,22 +84,14 @@
       </el-row>
       <el-row>
         <el-col :span="8" class="col-height">
-<<<<<<< HEAD
           <el-form-item label="证件类型" class="Form_item" prop="credentialType">
-=======
-          <el-form-item :label="$t('证件类型')" class="Form_item" prop="credentialType">
->>>>>>> master
             <el-select v-model="form.credentialType" clearable class="set-width" @change="changeCredentialNo">
               <el-option v-for="item in credential_type" :key="`credentialType${item.value}`" :value="item.value" :label="item.text"></el-option>
             </el-select>
           </el-form-item>
         </el-col>
         <el-col :span="8" style="position: relative;" class="col-height">
-<<<<<<< HEAD
           <el-form-item label="证件号" class="Form_item" prop="credentialNo">
-=======
-          <el-form-item :label="$t('证件号')" class="Form_item" prop="credentialNo">
->>>>>>> master
             <el-col :span="16">
               <el-input size="mini" v-model.trim="form.credentialNo" clearable @blur="changeCredentialNo"  @keyup.native="form.credentialNo=form.credentialNo.toUpperCase()"></el-input>
             </el-col>
@@ -146,11 +110,7 @@
           </el-form-item>
         </el-col>
         <el-col :span="8" class="col-height">
-<<<<<<< HEAD
           <el-form-item label="出生年月" class="Form_item" prop="birth">
-=======
-          <el-form-item :label="$t('出生日期')" class="Form_item" prop="birth">
->>>>>>> master
             <el-date-picker :disabled="form.credentialType==='CID'" v-model="form.birth" type="date" value-format="yyyy-MM-dd" placeholder="选择日期"
               style="width: 100%" :picker-options="{
               disabledDate: (date) => {
@@ -160,28 +120,16 @@
           </el-form-item>
         </el-col>
         <el-col :span="8" class="col-height">
-<<<<<<< HEAD
           <el-form-item label="性别" class="Form_item" prop="sex">
             <el-radio-group v-model="form.sex">
               <el-radio :disabled="form.credentialType==='CID'" v-for="(item, index) in json.sex" :key="index" :label="item.value">{{item.text}}</el-radio>
-=======
-          <el-form-item :label="$t('性别')" class="Form_item" prop="sex">
-            <el-radio-group v-model="form.sex">
-              <el-radio :disabled="form.credentialType==='CID'" v-for="(item, index) in sex" :key="index" :label="item.value">{{item.text}}</el-radio>
->>>>>>> master
             </el-radio-group>
           </el-form-item>
         </el-col>
         <el-col :span="8" class="col-height">
-<<<<<<< HEAD
           <el-form-item label="是否为在校大学生" class="Form_item"  label-width="150px" prop="volunteerType">
             <el-radio-group v-model="form.volunteerType">
               <el-radio v-for="(item, index) in json.yes_no_label" :key="index" :label="item.value">{{item.text}}</el-radio>
-=======
-          <el-form-item :label="$t('是否为在校大学生')" class="Form_item"  label-width="150px" prop="volunteerType">
-            <el-radio-group v-model="form.volunteerType">
-              <el-radio v-for="(item, index) in volunteerType" :key="index" :label="item.value">{{item.text}}</el-radio>
->>>>>>> master
             </el-radio-group>
           </el-form-item>
         </el-col>
@@ -217,11 +165,7 @@
           </el-form-item>
         </el-col>
         <el-col :span="8" class="col-height">
-<<<<<<< HEAD
           <el-form-item label="志愿组织" class="Form_item" prop="organizationId">
-=======
-          <el-form-item :label="$t('志愿组织')" class="Form_item" prop="organizationId">
->>>>>>> master
             <el-select v-model="form.organizationId" clearable class="set-width">
               <el-option v-for="item in organizationList" :key="`organization${item.value}`" :value="item.value" :label="item.text"></el-option>
             </el-select>
@@ -247,31 +191,19 @@
           </el-form-item>
         </el-col>
         <el-col :span="8" class="col-height">
-<<<<<<< HEAD
           <el-form-item label="健康状况" class="Form_item" prop="health">
-=======
-          <el-form-item :label="$t('健康状况')" class="Form_item" prop="health">
->>>>>>> master
             <el-select v-model="form.health" clearable class="set-width">
               <el-option v-for="item in json.health" :key="`health${item.value}`" :value="item.value" :label="item.text"></el-option>
             </el-select>
           </el-form-item>
         </el-col>
         <el-col :span="8" class="col-height">
-<<<<<<< HEAD
           <el-form-item label="身高(CM)" class="Form_item" prop="height">
-=======
-          <el-form-item :label="`${$t('身高')}(CM)`" class="Form_item" prop="height">
->>>>>>> master
             <el-input size="mini" v-model.trim="form.height" clearable type="number"></el-input>
           </el-form-item>
         </el-col>
         <el-col :span="8" style="position: relative;" class="col-height">
-<<<<<<< HEAD
           <el-form-item label="服装尺码" class="Form_item" prop="clothesSize">
-=======
-          <el-form-item :label="$t('服装尺码')" class="Form_item" prop="clothesSize">
->>>>>>> master
             <el-select v-model="form.clothesSize" clearable class="set-width">
               <el-option v-for="item in json.clothes_size" :key="`clothesSize${item.value}`" :value="item.value" :label="item.text"></el-option>
             </el-select>
@@ -281,20 +213,12 @@
           </el-form-item>
         </el-col>
         <el-col :span="8" class="col-height">
-<<<<<<< HEAD
           <el-form-item label="体重(KG)" class="Form_item" prop="weight">
-=======
-          <el-form-item :label="`${$t('体重')}(KG)`" class="Form_item" prop="weight">
->>>>>>> master
             <el-input size="mini"  v-model.trim="form.weight" clearable type="number"></el-input>
           </el-form-item>
         </el-col>
         <el-col :span="8" style="position: relative;" class="col-height">
-<<<<<<< HEAD
           <el-form-item label="鞋子尺码" class="Form_item" prop="shoesSize">
-=======
-          <el-form-item :label="$t('鞋子尺码')" class="Form_item" prop="shoesSize">
->>>>>>> master
             <el-select v-model="form.shoesSize" clearable class="set-width">
               <el-option v-for="item in json.shoes_size" :key="`shoesSize${item.value}`" :value="item.value" :label="item.text"></el-option>
             </el-select>
@@ -304,11 +228,7 @@
           </el-form-item>
         </el-col>
         <el-col :span="8" style="position: relative;" class="col-height">
-<<<<<<< HEAD
           <el-form-item label="裤子尺码" class="Form_item">
-=======
-          <el-form-item :label="$t('裤子尺码')" class="Form_item">
->>>>>>> master
             <el-select v-model="form.trouserSize" clearable class="set-width">
               <el-option v-for="item in json.trouser_size" :key="`trouserSize${item.value}`" :value="item.value" :label="item.text"></el-option>
             </el-select>
@@ -318,22 +238,14 @@
           </el-form-item>
         </el-col>
         <el-col :span="8" class="col-height">
-<<<<<<< HEAD
           <el-form-item label="血型" class="Form_item" prop="blood">
-=======
-          <el-form-item :label="$t('血型')" class="Form_item" prop="blood">
->>>>>>> master
             <el-select v-model="form.blood" clearable class="set-width">
               <el-option v-for="item in json.blood" :key="`blood${item.value}`" :value="item.value" :label="item.text"></el-option>
             </el-select>
           </el-form-item>
         </el-col>
         <el-col :span="8" class="col-height">
-<<<<<<< HEAD
           <el-form-item label="特长" class="Form_item" prop="speciality">
-=======
-          <el-form-item :label="$t('特长')" class="Form_item" prop="speciality">
->>>>>>> master
             <el-select v-model="form.speciality" clearable class="set-width">
               <el-option v-for="item in json.speciality" :key="`speciality${item.value}`" :value="item.value" :label="item.text"></el-option>
             </el-select>
@@ -342,15 +254,9 @@
       </el-row>
       <el-row>
         <el-col :span="12" class="col-height">
-<<<<<<< HEAD
           <el-form-item label="身体是否残疾" class="Form_item" label-width="120px" prop="disabilityFlag">
             <el-radio-group v-model="form.disabilityFlag">
               <el-radio v-for="(item, index) in json.yes_no_label" :key="index" :label="item.value">{{item.text}}</el-radio>
-=======
-          <el-form-item :label="$t('身体是否残疾')" class="Form_item" label-width="120px" prop="disabilityFlag">
-            <el-radio-group v-model="form.disabilityFlag">
-              <el-radio v-for="(item, index) in disabilityFlag" :key="index" :label="item.value">{{item.text}}</el-radio>
->>>>>>> master
             </el-radio-group>
           </el-form-item>
         </el-col>
@@ -366,11 +272,7 @@
       </el-row>
       <el-row>
         <el-col :span="8" class="col-height">
-<<<<<<< HEAD
           <el-form-item label="政治面貌" class="Form_item" prop="politicalOutlook"
-=======
-          <el-form-item :label="$t('政治面貌')" class="Form_item" prop="politicalOutlook"
->>>>>>> master
             :rules="form.nationality==='CHN'?rules.politicalOutlook:[{required: false}]">
             <el-select v-model="form.politicalOutlook" clearable class="set-width">
               <el-option v-for="item in json.political_outlook" :key="`politicalOutlook${item.value}`" :value="item.value" :label="item.text"></el-option>
@@ -378,11 +280,7 @@
           </el-form-item>
         </el-col>
         <el-col :span="8" class="col-height">
-<<<<<<< HEAD
           <el-form-item label="民族" class="Form_item" prop="nation"
-=======
-          <el-form-item :label="$t('民族')" class="Form_item" prop="nation"
->>>>>>> master
             :rules="form.nationality==='CHN'?rules.nation:[{required: false}]">
             <el-select v-model="form.nation" clearable class="set-width">
               <el-option v-for="item in json.nation" :key="`nation${item.value}`" :value="item.value" :label="item.text"></el-option>
@@ -392,22 +290,14 @@
       </el-row>
       <el-row>
         <el-col :span="8">
-<<<<<<< HEAD
           <el-form-item label="已分配岗位" class="Form_item">
-=======
-          <el-form-item :label="$t('已分配岗位')" class="Form_item">
->>>>>>> master
             <el-select v-model="form.postCode" clearable style="width: 100%" :disabled="!isId">
               <el-option v-for="item in json.zyz_post" :key="item.value" :value="item.value" :label="item.text"></el-option>
             </el-select>
           </el-form-item>
         </el-col>
         <el-col :span="8">
-<<<<<<< HEAD
           <el-form-item label="需求单位" class="Form_item">
-=======
-          <el-form-item :label="$t('需求单位')" class="Form_item">
->>>>>>> master
             <el-select v-model="form.unit" clearable style="width: 100%" :disabled="!isId">
               <el-option v-for="item in units" :key="item.value" :value="item.value" :label="item.text"></el-option>
             </el-select>
@@ -474,7 +364,6 @@ export default {
      {"text":"不签约大学","enText":"不签约大学","value":"100001","description":""},{"text":"签约大学","enText":"签约大学","value":"100002","description":""},{"text":"导入大学","enText":"导入大学","value":"100003","description":""},{"text":"成都大学","enText":"成都大学","value":"104","description":""}
       ],
       units: [],
-<<<<<<< HEAD
       form: {
         userId : '',
       volunteerType : '',
@@ -847,14 +736,6 @@ export default {
       }
 
       
-=======
-      form: {}, // 外部传进来的表单
-      organizationList: [], // 志愿组织列表
-      applyType:[{text:'赛会志愿者',value:'赛会志愿者'},{text:'城市志愿者',value:'城市志愿者'}],
-      disabilityFlag:[{text:'是',value:true},{text:'否',value:false}],
-      sex:[{text:'男',value:1},{text:'女',value:0}],
-      volunteerType:[{text:'是',value:true},{text:'否',value:false}],
->>>>>>> master
     }
   },
   created() {

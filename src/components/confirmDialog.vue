@@ -14,13 +14,8 @@
       </div>
       <template slot="footer">
         <!-- 如果没特别需求，统一使用mixin里面的关闭方法 -->
-<<<<<<< HEAD
         <el-button @click="sureEvent" type="primary">是</el-button>
         <el-button @click="closeDialog" type="info">否</el-button>
-=======
-        <el-button @click="sureEvent" type="primary">{{$t('是')}}</el-button>
-        <el-button @click="closeDialog" type="info">{{$t('否')}}</el-button>
->>>>>>> master
       </template>
     </el-dialog>
   </div>
